@@ -1,4 +1,5 @@
-import react, { FormEvent, useState } from "react";
+import React, { FormEvent, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { api } from "../../services/api";
 import "./styles.css";
 
@@ -6,18 +7,24 @@ const Hero = () => {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
 
+  const navigate = useNavigate()
+
   const handleLoginSubmit = async (e: FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
 
     try {
       const response = await api.post("/api/v1/auth", {
         "login": email,
         "password": senha
-      })
+      });
 
-      alert("Login realizado com sucesso!")
+      localStorage.setItem("accessToken", response.data.token);
+
+      navigate('Home');
+
+      alert("Login realizado com sucesso!");
     } catch (error) {
-      alert("Falha ao realizar login.")
+      alert("Falha ao realizar login.");
     }
   }
 
