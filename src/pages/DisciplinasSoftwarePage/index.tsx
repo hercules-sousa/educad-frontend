@@ -323,3 +323,5 @@ const DisciplinasSoftwarePage = () => {
     </>
   );
 };
+
+export default DisciplinasSoftwarePage;
