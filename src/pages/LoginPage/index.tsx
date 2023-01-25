@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { api } from "../../services/api";
 import "./styles.css";
 
-const Hero = () => {
+const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
 
@@ -98,4 +98,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default LoginPage;

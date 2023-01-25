@@ -1,16 +1,24 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
-import Hero from "./pages/HeroPage";
 import Home from "./pages/Home";
+import LoginPage from "./pages/LoginPage";
+import { AuthContextProvider, RequireAuth } from "./services/auth";
 
 function Router() {
   return (
-    <BrowserRouter>
+    <AuthContextProvider>
       <Routes>
-        <Route path="/" element={<Hero />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<LoginPage />} />
+        <Route
+          path="/home"
+          element={
+            <RequireAuth>
+              <Home />
+            </RequireAuth>
+          }
+        />
       </Routes>
-    </BrowserRouter>
+    </AuthContextProvider>
   );
 }
 
