@@ -1,12 +1,15 @@
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { api } from "../../services/api";
+
+import { useAuth } from "../../services/auth";
+
 import "./styles.css";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
 
+  const authContext = useAuth();
   const navigate = useNavigate();
 
   const handleLoginSubmit = async (e: FormEvent) => {
@@ -15,14 +18,7 @@ const LoginPage = () => {
     console.log(email);
 
     try {
-      const response = await api.post("/api/v1/auth", {
-        login: email,
-        password: senha,
-      });
-
-      localStorage.setItem("accessToken", response.data.token);
-
-      navigate("Home");
+      authContext.signIn(email, senha, () => navigate("Home"));
 
       alert("Login realizado com sucesso!");
     } catch (error) {

@@ -1,6 +1,8 @@
 import { createContext, useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 
+import { api } from "./api";
+
 interface AuthContextProps {
   signIn: (
     username: string,
@@ -14,13 +16,18 @@ interface AuthContextProps {
 let AuthContext = createContext<AuthContextProps>(null!);
 
 const AuthContextProvider = ({ children }: { children: React.ReactNode }) => {
-  const signIn = (
+  const signIn = async (
     username: string,
     password: string,
     callback?: VoidFunction
   ) => {
-    // Fazer a requisição com o axios e setar o token
-    localStorage.setItem("token", "token");
+    const response = await api.post("/api/v1/auth", {
+      login: username,
+      password: password,
+    });
+
+    localStorage.setItem("token", response.data.token);
+
     if (callback) {
       callback();
     }
@@ -57,4 +64,4 @@ const RequireAuth = ({ children }: { children: JSX.Element }) => {
   return children;
 };
 
-export { AuthContextProvider, RequireAuth };
+export { AuthContextProvider, RequireAuth, useAuth };
