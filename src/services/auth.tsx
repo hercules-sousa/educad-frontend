@@ -64,4 +64,15 @@ const RequireAuth = ({ children }: { children: JSX.Element }) => {
   return children;
 };
 
-export { AuthContextProvider, RequireAuth, useAuth };
+const RequireNoAuth = ({ children }: { children: JSX.Element }) => {
+  const auth = useAuth();
+  const location = useLocation();
+
+  if (auth.getToken()) {
+    return <Navigate to="/home" state={{ from: location }} replace />;
+  }
+
+  return children;
+};
+
+export { AuthContextProvider, RequireAuth, RequireNoAuth, useAuth };

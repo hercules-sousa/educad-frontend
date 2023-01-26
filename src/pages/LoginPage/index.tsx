@@ -6,7 +6,7 @@ import { useAuth } from "../../services/auth";
 import "./styles.css";
 
 const LoginPage = () => {
-  const [email, setEmail] = useState("");
+  const [login, setLogin] = useState("");
   const [senha, setSenha] = useState("");
 
   const authContext = useAuth();
@@ -15,10 +15,10 @@ const LoginPage = () => {
   const handleLoginSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    console.log(email);
+    console.log(login);
 
     try {
-      authContext.signIn(email, senha, () => navigate("Home"));
+      authContext.signIn(login, senha, () => navigate("home"));
 
       alert("Login realizado com sucesso!");
     } catch (error) {
@@ -33,9 +33,9 @@ const LoginPage = () => {
         <br />
         <form className="campos-login" onSubmit={handleLoginSubmit}>
           <input
-            className="email"
-            placeholder="Email"
-            onChange={(e) => setEmail(e.target.value)}
+            className="login"
+            placeholder="Matrícula"
+            onChange={(e) => setLogin(e.target.value)}
           />
           <svg
             id="user"
