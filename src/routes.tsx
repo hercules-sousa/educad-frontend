@@ -2,6 +2,8 @@ import { Route, Routes } from "react-router-dom";
 
 import Home from "./pages/Home";
 import LoginPage from "./pages/LoginPage";
+import DisciplinasPage from "./pages/DisciplinasPage";
+
 import { AuthContextProvider, RequireAuth, RequireNoAuth } from "./services/auth";
 
 function Router() {
@@ -21,6 +23,14 @@ function Router() {
           element={
             <RequireAuth>
               <Home />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/disciplinas"
+          element={
+            <RequireAuth>
+              <DisciplinasPage />
             </RequireAuth>
           }
         />
