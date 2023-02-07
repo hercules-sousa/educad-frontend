@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import LoginPage from "./pages/LoginPage";
 import DisciplinasPage from "./pages/DisciplinasPage";
+import SelectedSubjectPage from "./pages/SelectedSubjectPage";
 
 import { AuthContextProvider, RequireAuth, RequireNoAuth } from "./services/auth";
 
@@ -31,6 +32,14 @@ function Router() {
           element={
             <RequireAuth>
               <DisciplinasPage />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/disciplina"
+          element={
+            <RequireAuth>
+              <SelectedSubjectPage />
             </RequireAuth>
           }
         />
