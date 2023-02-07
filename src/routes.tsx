@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import LoginPage from "./pages/LoginPage";
 import DisciplinasPage from "./pages/DisciplinasPage";
 import SelectedSubjectPage from "./pages/SelectedSubjectPage";
+import MessagePage from "./pages/MessagePage";
 
 import { AuthContextProvider, RequireAuth, RequireNoAuth } from "./services/auth";
 
@@ -40,6 +41,14 @@ function Router() {
           element={
             <RequireAuth>
               <SelectedSubjectPage />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/mensagem"
+          element={
+            <RequireAuth>
+              <MessagePage />
             </RequireAuth>
           }
         />
