@@ -67,7 +67,7 @@ const SelectedSubjectPage = () => {
 
       {selectedOption === OPTION_MATERIAIS ? (
         <>
-          <h2>vídeos</h2>
+          <h2 className={styles["section-title"]}>vídeos</h2>
 
           <div className={styles["videos"]}>        
             <div className={styles["colecao"]}>
@@ -77,7 +77,7 @@ const SelectedSubjectPage = () => {
             </div>
           </div>
 
-          <h2>slides</h2>
+          <h2 className={styles["section-title"]}>slides</h2>
 
           <div className={styles["slides"]}>        
             <div className={styles["colecao"]}>
@@ -87,7 +87,7 @@ const SelectedSubjectPage = () => {
             </div>
           </div>
 
-          <h2>materiais escritos</h2>
+          <h2 className={styles["section-title"]}>materiais escritos</h2>
 
           <div className={styles["materiais"]}>        
             <div className={styles["colecao"]}>
@@ -99,7 +99,7 @@ const SelectedSubjectPage = () => {
         </>
       ) : selectedOption === OPTION_ATIVIDADES ? (
         <>
-          <h2>atividades</h2>
+          <h2 className={styles["section-title"]}>atividades</h2>
 
           <div className={styles["atividade"]}>        
               <div className={styles["colecao"]}>
@@ -112,7 +112,7 @@ const SelectedSubjectPage = () => {
       ) : (
         selectedOption === OPTION_TURMA &&
           <>
-            <h2>turma</h2>
+            <h2 className={styles["section-title"]}>turma</h2>
 
             <div className={styles["turma"]}>        
                 <div className="colecao colecao-turma">
