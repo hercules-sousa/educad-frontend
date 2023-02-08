@@ -1,5 +1,6 @@
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Input from "../../components/Input";
 
 import { useAuth } from "../../services/auth";
 
@@ -62,7 +63,7 @@ const LoginPage = () => {
             className="senha"
             placeholder="Senha"
             onChange={(e) => setSenha(e.target.value)}
-          ></input>
+          />
 
           <svg id="olho" className="olho" viewBox="0 0 24 24">
             <path
@@ -82,6 +83,8 @@ const LoginPage = () => {
             Entrar
           </button>
         </form>
+
+        <Input />
       </div>
 
       <div className="login-visual">
