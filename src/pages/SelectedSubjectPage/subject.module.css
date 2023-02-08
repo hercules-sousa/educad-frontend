@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+
+:root {
+    --corEducad: #211A30;
+    --corAzulMedio: #3861CA;
+    --corAzulMarinho: #36407C;
+    --corTexto: #1B1D2A;
+    --corBotaoSoftware: #273D4E;
+    --corBotaoPeriodo: #8457D6;
+    --corBotaoPago: #2FB02C;
+    --corBotaoDepente: #D73737;
+    --corBotaoCursando: #D3D737;
+    --corAzulMedio: #3861CA;
+    --corAzulMarinho: #36407C;
+}
+
+* {
+  font-family: 'Inter';
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+/*MENU*/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+
+nav a {
+    font-size: 40px;
+    margin: 65px 0px 20px 65px;
+    text-decoration: none;
+    color: var(--corEducad);
+    height: 48px;
+}
+
+nav a span {
+    font-weight: 700;
+}
+
+.menu-perfil {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin: 50px 76px 20px 0px;
+}
+
+
+/*BARRA DE HISTORICO*/
+.barra-historico {
+    /* border: 1px solid green; */
+    margin: 30px 300px;
+}
+
+.barra-historico > span > a:hover {
+    color: var(--corBotaoPeriodo);
+}
+
+.barra-historico > span > a {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--corEducad);
+    text-transform: capitalize;
+}
+
+
+/*BLOCO IMAGEM*/
+.dados-basicos {
+    display: flex;
+    background-color: var(--corTexto);
+    width: 880px;
+    margin: 50px 300px 0px 300px;
+    border-radius: 20px;
+}
+
+.dados-disciplinas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 550px;
+}
+
+.dados-disciplinas > div > div > span {
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+}
+.dados-disciplinas > div > div > p {
+    display: inline;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+.dados-disciplinas > div > div {
+    margin-bottom: 12px;
+}
+
+/*OPÇÕES DISCIPLINAS*/
+.opcoes-disciplina {
+    /* border: 1px solid red; */
+    margin: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.opcoes-disciplina > div > button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 75px;
+    margin: 10px;
+    background-color: #949494;
+    border-radius: 21px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: white;
+}
+
+.opcoes-disciplina > .opcao-ativa > button {
+    background-color: var(--corTexto);
+}
+
+/*VIDEOS*/
+.videos, .slides, .materiais, .atividade, .turma {
+    /* border: 1px solid palevioletred; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0px 110px 0px;
+}
+
+h2 {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 21px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, var(--corAzulMedio), var(--corAzulMarinho));  
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    color: black;
+    margin-left: 320px;
+}
+
+.colecao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 850px;
+    /* border: 1px solid yellow; */
+}
+
+.colecao-turma {
+    flex-wrap: wrap;
+    /* border: 1px solid green */
+}
+
+.alunos {
+    margin: 10px;
+    height: 395px;
+    border-radius: 20px;
+    display: flex;
+    background-color: #949494;
+    flex-direction: column;    
+}
+
+.alunos > img {
+    border-radius: 20px;
+}
+
+.alunos > p {
+    padding: 12px 0px;
+    width: 250px;
+    text-align: center;
+    color: white;
+    letter-spacing: 0.8px;
+    font-size: 14px;
+}
+
+.video1, .video2, .video3, .material1, .material2, .material3, .slide1, .slide2, .slide3, .atividade1, .atividade2, .atividade3 {
+    width: 210px;
+    height: 210px;
+    margin-right: 10px;
+    background-color: #4C436F;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    line-height: 200px;
+}

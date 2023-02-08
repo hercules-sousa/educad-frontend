@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+
+:root {
+    --corEducad: #211A30;
+    --corAzulMedio: #3861CA;
+    --corAzulMarinho: #36407C;
+    --corTexto: #1B1D2A;
+    --corBotaoSoftware: #273D4E;
+    --corBotaoPeriodo: #8457D6;
+    --corBotaoPago: #2FB02C;
+    --corBotaoDepente: #D73737;
+    --corBotaoCursando: #D3D737;
+    --corAzulMedio: #3861CA;
+    --corAzulMarinho: #36407C;
+}
+
+* {
+  font-family: 'Inter';
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+/*MENU*/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+
+nav a {
+    font-size: 40px;
+    margin: 65px 0px 20px 65px;
+    text-decoration: none;
+    color: var(--corEducad);
+    height: 48px;
+}
+
+nav a span {
+    font-weight: 700;
+}
+
+.menu-perfil {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin: 50px 76px 20px 0px;
+}
+
+/*BARRA DE HISTORICO*/
+.barra-historico {
+    /* border: 1px solid green; */
+    margin: 30px 300px;
+}
+
+.barra-historico > span > a:hover {
+    color: var(--corBotaoPeriodo);
+}
+
+.barra-historico > span > a {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--corEducad);
+    text-transform: capitalize;
+}
+
+/*CONVERSAR ALUNO*/
+.imagem-aluno > img {
+    border-radius: 20px;
+}
+
+.dados-basicos-alunos {
+    display: flex;
+    background-color: var(--corTexto);
+    width: 880px;
+    margin: 50px 300px 0px 300px;
+    border-radius: 20px;
+    height: 350px;
+}
+
+.dados-aluno {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 550px;
+}
+
+.dados-aluno > div > div > span {
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+}
+.dados-aluno > div > div > p {
+    display: inline;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+.dados-aluno > div > div {
+    margin-bottom: 12px;
+}
+
+/*FALAR ALUNO*/
+
+.falar-aluno {
+    /* border: 1px solid red; */
+    display: flex;
+    height: 180px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.falar-aluno > div {
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid green; */
+    margin-left: 295px;
+}
+
+.falar-aluno > div > .nome-assunto {
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-direction: column;
+}
+
+.nome, .assunto, .mensagem {
+    height: 55px;
+    /* margin-bottom: 30px; */
+    width: 350px;
+    background-color: #D9D9D9;
+    border: none;
+    border-radius: 10px;
+}
+
+input {
+    padding-left: 20px;
+    color: var(--corEducad);
+}
+
+.nome, .assunto {
+    margin-top: 25px;
+}
+
+.mensagem {
+    height: 100px;
+    width: 450px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.enviar-mensagem {
+    background-color: #936CDB;
+    text-transform: capitalize;
+    width: 50px;
+    text-decoration: none;
+    color: white;
+    padding-left: 60px;
+    
+}
+
+.mensagem-enviar {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    height: 180px;
+    margin-left: 50px;
+}
+
+.mensagem-enviar > a {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    width: 120px;
+    border-radius: 10px;
+    margin-top: 20px;
+}

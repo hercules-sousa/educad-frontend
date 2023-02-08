@@ -1,28 +1,24 @@
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { api } from "../../services/api";
+
+import { useAuth } from "../../services/auth";
+
 import "./styles.css";
 
-const Hero = () => {
-  const [email, setEmail] = useState("");
+const LoginPage = () => {
+  const [login, setLogin] = useState("");
   const [senha, setSenha] = useState("");
 
+  const authContext = useAuth();
   const navigate = useNavigate();
 
   const handleLoginSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    console.log(email);
+    console.log(login);
 
     try {
-      const response = await api.post("/api/v1/auth", {
-        login: email,
-        password: senha,
-      });
-
-      localStorage.setItem("accessToken", response.data.token);
-
-      navigate("Home");
+      authContext.signIn(login, senha, () => navigate("home"));
 
       alert("Login realizado com sucesso!");
     } catch (error) {
@@ -37,9 +33,9 @@ const Hero = () => {
         <br />
         <form className="campos-login" onSubmit={handleLoginSubmit}>
           <input
-            className="email"
-            placeholder="Email"
-            onChange={(e) => setEmail(e.target.value)}
+            className="login"
+            placeholder="Matrícula"
+            onChange={(e) => setLogin(e.target.value)}
           />
           <svg
             id="user"
@@ -98,4 +94,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default LoginPage;

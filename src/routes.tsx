@@ -1,16 +1,59 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
-import Hero from "./pages/HeroPage";
 import Home from "./pages/Home";
+import LoginPage from "./pages/LoginPage";
+import DisciplinasPage from "./pages/DisciplinasPage";
+import SelectedSubjectPage from "./pages/SelectedSubjectPage";
+import MessagePage from "./pages/MessagePage";
+
+import { AuthContextProvider, RequireAuth, RequireNoAuth } from "./services/auth";
 
 function Router() {
   return (
-    <BrowserRouter>
+    <AuthContextProvider>
       <Routes>
-        <Route path="/" element={<Hero />} />
-        <Route path="/home" element={<Home />} />
+        <Route
+          path="/"
+          element={
+            <RequireNoAuth>
+              <LoginPage />
+            </RequireNoAuth>
+          }
+        />
+        <Route
+          path="/home"
+          element={
+            <RequireAuth>
+              <Home />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/disciplinas"
+          element={
+            <RequireAuth>
+              <DisciplinasPage />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/disciplina"
+          element={
+            <RequireAuth>
+              <SelectedSubjectPage />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/mensagem"
+          element={
+            <RequireAuth>
+              <MessagePage />
+            </RequireAuth>
+          }
+        />
       </Routes>
-    </BrowserRouter>
+    </AuthContextProvider>
   );
 }
 
