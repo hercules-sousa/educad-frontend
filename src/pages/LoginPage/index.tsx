@@ -84,7 +84,7 @@ const LoginPage = () => {
           </button>
         </form>
 
-        <Input />
+        <Input placeholder="Teste" />
       </div>
 
       <div className="login-visual">
