@@ -1,6 +1,7 @@
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Input from "../../components/Input";
+import EmailIcon from "../../assets/icons/email.svg";
 
 import { useAuth } from "../../services/auth";
 
@@ -84,7 +85,7 @@ const LoginPage = () => {
           </button>
         </form>
 
-        <Input placeholder="Teste" />
+        <Input placeholder="Teste" icon={EmailIcon} />
       </div>
 
       <div className="login-visual">
