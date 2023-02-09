@@ -6,7 +6,7 @@ export const StyledInput = styled.input`
   width: 100%;
   height: 100%;
   border: 1.5px solid #2e81ff;
-  padding-left: 62px;
+  padding-left: 56px;
   font-weight: 400;
   font-size: 16px;
   color: #9a9a9a;
@@ -23,5 +23,5 @@ export const StyledDiv = styled.div`
 export const StyledImg = styled.img`
   position: absolute;
   text-align: center;
-  margin-left: 16px;
+  margin-left: 24px;
 `
