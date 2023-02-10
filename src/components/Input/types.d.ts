@@ -8,5 +8,5 @@ export default interface InputProps {
 
 interface EyeButtonProps {
   on?: boolean;
-  onClick: VoidFunction;
+  onClick: (e: SyntheticEvent) => void;
 }

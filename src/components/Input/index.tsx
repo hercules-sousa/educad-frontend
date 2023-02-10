@@ -2,7 +2,7 @@ import { StyledDiv, StyledEyeButton, StyledImg, StyledInput } from "./styles";
 import InputProps, { EyeButtonProps } from "./types";
 import EyeOff from "../../assets/icons/eye-off.svg";
 import EyeOn from "../../assets/icons/eye-on.svg";
-import { useState } from "react";
+import { SyntheticEvent, useState } from "react";
 
 const EyeButton: React.FC<EyeButtonProps> = ({ on, onClick }) => {
   return (
@@ -35,12 +35,13 @@ const Input: React.FC<InputProps> = ({
         placeholder={placeholder}
         onChange={onChange}
         type={
-          type === "password" ? (showPassword ? "password" : "text") : "text"
+          type === "password" ? (showPassword ? "text" : "password") : "text"
         }
       />
       {rightIcon && (
         <EyeButton
-          onClick={() => {
+          onClick={(e: SyntheticEvent) => {
+            e.preventDefault();
             setEyeOn(!eyeOn);
             setShowPassword(!showPassword);
           }}
