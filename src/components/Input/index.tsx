@@ -34,7 +34,9 @@ const Input: React.FC<InputProps> = ({
       <StyledInput
         placeholder={placeholder}
         onChange={onChange}
-        type={showPassword ? "text" : "password"}
+        type={
+          type === "password" ? (showPassword ? "password" : "text") : "text"
+        }
       />
       {rightIcon && (
         <EyeButton
