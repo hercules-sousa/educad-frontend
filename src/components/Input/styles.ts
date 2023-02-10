@@ -9,11 +9,11 @@ export const StyledInput = styled.input`
   padding-left: 56px;
   font-weight: 400;
   font-size: 16px;
-  color: #6a6a6a;
+  color: #9a9a9a;
   transition: 0.3s;
   
   ::placeholder {
-    opacity: 0.7;
+    opacity: 0.5;
   }
 
   :focus {

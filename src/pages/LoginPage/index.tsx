@@ -33,7 +33,7 @@ const LoginPage = () => {
       <div className="login-form">
         <h2>Bem-vindo(a) de volta!</h2>
         <br />
-        <form className="campos-login" onSubmit={handleLoginSubmit}>
+        {/* <form className="campos-login" onSubmit={handleLoginSubmit}>
           <input
             className="login"
             placeholder="Matrícula"
@@ -83,7 +83,7 @@ const LoginPage = () => {
           <button type="submit" className="btn-login">
             Entrar
           </button>
-        </form>
+        </form> */}
 
         <Input
           placeholder="Nome de Usuário"
@@ -91,6 +91,15 @@ const LoginPage = () => {
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
             setLogin(e.target.value)
           }
+        />
+
+        <Input
+          placeholder="Senha"
+          icon={EmailIcon}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setSenha(e.target.value)
+          }
+          type="password"
         />
       </div>
 
