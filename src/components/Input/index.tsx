@@ -23,7 +23,8 @@ const Input: React.FC<InputProps> = ({
   onChange,
   type,
 }) => {
-  const [inputType, setInputType] = useState<string>(type || "text");
+  const [showPassword, setShowPassword] = useState<boolean>(false);
+  const [eyeOn, setEyeOn] = useState<boolean>(false);
 
   return (
     <StyledDiv>
@@ -33,9 +34,17 @@ const Input: React.FC<InputProps> = ({
       <StyledInput
         placeholder={placeholder}
         onChange={onChange}
-        type={inputType}
+        type={showPassword ? "text" : "password"}
       />
-      {rightIcon && <EyeButton onClick={() => alert("Clicando")} />}
+      {rightIcon && (
+        <EyeButton
+          onClick={() => {
+            setEyeOn(!eyeOn);
+            setShowPassword(!showPassword);
+          }}
+          on={eyeOn}
+        />
+      )}
     </StyledDiv>
   );
 };
