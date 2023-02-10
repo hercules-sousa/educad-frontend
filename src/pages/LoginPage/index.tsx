@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, SyntheticEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Input from "../../components/Input";
 import EmailIcon from "../../assets/icons/email.svg";
@@ -19,13 +19,13 @@ const LoginPage = () => {
 
     console.log(login);
 
-    try {
+    /* try {
       authContext.signIn(login, senha, () => navigate("home"));
 
       alert("Login realizado com sucesso!");
     } catch (error) {
       alert("Falha ao realizar login.");
-    }
+    } */
   };
 
   return (
@@ -85,7 +85,13 @@ const LoginPage = () => {
           </button>
         </form>
 
-        <Input placeholder="Teste" icon={EmailIcon} />
+        <Input
+          placeholder="Nome de Usuário"
+          icon={EmailIcon}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setLogin(e.target.value)
+          }
+        />
       </div>
 
       <div className="login-visual">

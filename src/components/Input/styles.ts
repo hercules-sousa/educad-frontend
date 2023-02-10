@@ -9,8 +9,17 @@ export const StyledInput = styled.input`
   padding-left: 56px;
   font-weight: 400;
   font-size: 16px;
-  color: #9a9a9a;
+  color: #6a6a6a;
   transition: 0.3s;
+  
+  ::placeholder {
+    opacity: 0.7;
+  }
+
+  :focus {
+    border-color: #2e81ff;
+    box-shadow: 0 0 8px 0 #2e81ff;
+  }
 `
 
 export const StyledDiv = styled.div`
