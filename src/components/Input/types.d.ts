@@ -1,6 +1,12 @@
 export default interface InputProps {
   placeholder?: string;
-  icon?: ReactNode;
+  leftIcon?: ReactNode;
   onChange?: ChangeEventHandler<HTMLInputElement>;
   type?: string;
+  rightIcon?: ReactNode;
+}
+
+interface EyeButtonProps {
+  on?: boolean;
+  onClick: VoidFunction;
 }

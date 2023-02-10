@@ -87,7 +87,7 @@ const LoginPage = () => {
 
         <Input
           placeholder="Nome de Usuário"
-          icon={EmailIcon}
+          leftIcon={EmailIcon}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
             setLogin(e.target.value)
           }
@@ -95,11 +95,12 @@ const LoginPage = () => {
 
         <Input
           placeholder="Senha"
-          icon={EmailIcon}
+          leftIcon={EmailIcon}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
             setSenha(e.target.value)
           }
           type="password"
+          rightIcon
         />
       </div>
 

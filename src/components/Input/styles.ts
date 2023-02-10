@@ -7,6 +7,7 @@ export const StyledInput = styled.input`
   height: 100%;
   border: 1.5px solid #2e81ff;
   padding-left: 56px;
+  padding-right: 56px;
   font-weight: 400;
   font-size: 16px;
   color: #9a9a9a;
@@ -24,13 +25,29 @@ export const StyledInput = styled.input`
 
 export const StyledDiv = styled.div`
   display: flex;
+  position: relative;
   align-items: center;
   width: 495px;
   height: 54px;
 `
 
-export const StyledImg = styled.img`
+interface StyledPositionProps {
+  left?: number;
+  right?: number;
+}
+
+export const StyledImg = styled.img<StyledPositionProps>`
   position: absolute;
-  text-align: center;
-  margin-left: 24px;
+  left: ${props => `${props.left}px` || 0};
+  right: ${props => `${props.right}px` || 0};
+`
+export const StyledEyeButton = styled.button<StyledPositionProps>`
+  position: absolute;
+  right: ${props => `${props.right}px` || 0};
+  left: ${props => `${props.left}px` || 0};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  background-color: transparent;
 `
