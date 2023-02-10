@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const StyledInput = styled.input`
+interface StyledInputProps {
+  marginBottom?: number;
+}
+
+export const StyledInput = styled.input<StyledInputProps>`
   border-radius: 8px;
   outline: none;
   width: 100%;

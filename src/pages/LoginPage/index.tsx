@@ -2,11 +2,12 @@ import { FormEvent, SyntheticEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Input from "../../components/Input";
 import EmailIcon from "../../assets/icons/email.svg";
+import LockIcon from "../../assets/icons/lock.svg";
 
 import { useAuth } from "../../services/auth";
 
 import "./styles.css";
-import { StyledForm } from "./styles";
+import { StyledForm, StyledInputContainer } from "./styles";
 
 const LoginPage = () => {
   const [login, setLogin] = useState("");
@@ -34,23 +35,26 @@ const LoginPage = () => {
       <div className="login-form">
         <StyledForm>
           <h2>Bem-vindo(a) de volta!</h2>
-          <Input
-            placeholder="Nome de Usuário"
-            leftIcon={EmailIcon}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setLogin(e.target.value)
-            }
-          />
 
-          <Input
-            placeholder="Senha"
-            leftIcon={EmailIcon}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setSenha(e.target.value)
-            }
-            type="password"
-            rightIcon
-          />
+          <StyledInputContainer>
+            <Input
+              placeholder="Nome de Usuário"
+              leftIcon={EmailIcon}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setLogin(e.target.value)
+              }
+            />
+
+            <Input
+              placeholder="Senha"
+              leftIcon={LockIcon}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setSenha(e.target.value)
+              }
+              type="password"
+              rightIcon
+            />
+          </StyledInputContainer>
         </StyledForm>
       </div>
 
