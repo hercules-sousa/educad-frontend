@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 import "./styles.css";
+
+import NavBar from "../../components/NavBar";
 
 import GroupImage from '../../assets/Group-26.png';
 import EditalImage from '../../assets/image-3.png';
@@ -9,19 +13,12 @@ import ExatasImage from '../../assets/Rectangle-42.png';
 import HumanasImage from '../../assets/Rectangle-50.png';
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="container">
-        <nav className="menu">
-          <a href="#">
-            <span className="menu-logo">Edu</span>cad
-          </a>
-          <img
-            alt="Foto perfil"
-            className="menu-perfil"
-            src="https://source.unsplash.com/75x75/?teenage-man"
-          />
-        </nav>
+        <NavBar />
 
         <div className="so-para-alinhar">
           <div className="boas-vindas">
@@ -35,7 +32,11 @@ const Home = () => {
               engagement and monetization with better mobile campaigns
             </p>
             <div className="botoes">
-              <button type="button" className="turmas-virtuais">
+              <button
+                type="button"
+                className="turmas-virtuais"
+                onClick={() => navigate("/disciplinas")}
+              >
                 Minhas turmas virtuais
               </button>
               <button type="button" className="meus-estudos">

@@ -1,20 +1,13 @@
 import "./styles.css";
 
-import ChipImage from '../../assets/chip.png'
+import NavBar from "../../components/NavBar";
+
+import ChipImage from '../../assets/chip.png';
 
 const DisciplinasPage = () => {
   return (
     <>
-      <nav className="menu">
-        <a href="tela-inicial.html">
-          <span className="menu-logo">Edu</span>cad
-        </a>
-        <img
-          alt="Foto perfil"
-          className="menu-perfil"
-          src="https://source.unsplash.com/75x75/?teenage-man"
-        />
-      </nav>
+      <NavBar />
 
       <div className="container-disciplinas">
         <h2>Disciplinas do semestre</h2>

@@ -1,16 +1,17 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { useAuth } from "../../services/auth";
+
+import "./styles.css";
+
+import { StyledForm, StyledInputContainer } from "./styles";
+
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 
 import EmailIcon from "../../assets/icons/email.svg";
 import LockIcon from "../../assets/icons/lock.svg";
-
-import { useAuth } from "../../services/auth";
-
-import "./styles.css";
-import { StyledForm, StyledInputContainer } from "./styles";
 
 const LoginPage = () => {
   const [login, setLogin] = useState("");
@@ -23,7 +24,7 @@ const LoginPage = () => {
     console.log(login);
 
     try {
-      authContext.signIn(login, senha, () => navigate("home"));
+      authContext.signIn(login, senha, () => navigate("/home"));
 
       alert("Login realizado com sucesso!");
     } catch (error) {

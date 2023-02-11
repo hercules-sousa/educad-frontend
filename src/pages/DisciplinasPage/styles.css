@@ -12,31 +12,6 @@
     --corBotaoCursando: #D3D737;
 }
 
-* {
-  font-family: 'Inter';
-  font-style: normal;
-  margin: 0;
-  padding: 0;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-}
-
-nav a {
-    font-size: 40px;
-    margin: 65px 0px 20px 65px;
-    text-decoration: none;
-    color: var(--corEducad);
-    height: 48px;
-}
-
-nav a span {
-    font-weight: 700;
-}
-
-
 .menu-perfil {
     border-radius: 50%;
     width: 70px;

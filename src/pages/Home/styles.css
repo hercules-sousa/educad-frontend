@@ -14,13 +14,6 @@
     --corLink: #1FB0C1;
 }
 
-* {
-  font-family: 'Inter';
-  font-style: normal;
-  margin: 0;
-  padding: 0;
-}
-
 .container {
     background: linear-gradient(var(--corAzulEscuro), var(--corVioletaClaro));
     height: 777px;
@@ -28,25 +21,6 @@
     flex-direction: column;
     /* border: 1px solid red; */
 }
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    
-}
-
-nav a {
-    font-size: 40px;
-    margin: 65px 0px 20px 65px;
-    text-decoration: none;
-    color: var(--corBranco);
-    height: 48px;
-}
-
-nav a span {
-    font-weight: 700;
-}
-
 
 .menu-perfil {
     border-radius: 50%;
@@ -110,6 +84,7 @@ nav a span {
 }
 
 .turmas-virtuais{
+    cursor: pointer;
     width: 202px;
     height: 55px;
     background-color: var(--corTurmasVirtuais);
@@ -120,6 +95,7 @@ nav a span {
 }
 
 .meus-estudos{
+    cursor: pointer;
     width: 143px;
     height: 55px;
     background-color: var(--corBranco);

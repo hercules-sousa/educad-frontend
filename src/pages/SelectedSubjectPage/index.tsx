@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import styles from "./subject.module.css";
 
+import NavBar from "../../components/NavBar";
+
 import SubjectImage from '../../assets/Imagem-dados-disciplina.png';
 
 const SelectedSubjectPage = () => {
@@ -13,10 +15,7 @@ const SelectedSubjectPage = () => {
 
   return (
     <>
-      <nav className={styles["menu"]}>
-          <a href="tela-inicial.html"><span className={styles["menu-logo"]}>Edu</span>cad</a>
-          <img alt="Foto perfil" className={styles["menu-perfil"]} src="https://source.unsplash.com/75x75/?teenage-man" />
-      </nav>
+      <NavBar />
 
       <div className={styles["barra-historico"]}>
           <span className={styles["tela-inicial"]}><a href="tela-inicial.html">Home</a></span>
