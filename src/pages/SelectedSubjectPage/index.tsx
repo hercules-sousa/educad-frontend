@@ -5,6 +5,7 @@ import styles from "./subject.module.css";
 import NavBar from "../../components/NavBar";
 
 import SubjectImage from '../../assets/Imagem-dados-disciplina.png';
+import HistoryBar from "../../components/HistoryBar";
 
 const SelectedSubjectPage = () => {
   const OPTION_MATERIAIS = 1;
@@ -17,17 +18,7 @@ const SelectedSubjectPage = () => {
     <>
       <NavBar />
 
-      <div className={styles["barra-historico"]}>
-          <span className={styles["tela-inicial"]}><a href="tela-inicial.html">Home</a></span>
-          <span className={styles["sinal-ultimo-visitado"]}>&gt;</span>
-          <span className={styles["ultima-area-visitada"]}><a href="tela-inicial.html .conteiner2">Software</a></span>
-          <span className={styles["sinal-ultimo-visitado"]}>&gt;</span>
-          <span className={styles["ultima-disciplina-visitada"]}><a href="disciplinas-software.html">Disciplina</a></span>
-          <span className={styles["sinal-ultimo-visitado"]}>&gt;</span>
-          <span className={styles["disciplina-atual"]}><a href="disciplina-selecionada-material.html">Teste de Software</a></span>
-          <span className={styles["sinal-ultimo-visitado"]}>&gt;</span>
-          <span ><a href="#">Material</a></span>
-      </div>
+      <HistoryBar />
 
       <div className={styles["dados-basicos"]}>
         <div className={styles["imagem-disiciplina"]}>

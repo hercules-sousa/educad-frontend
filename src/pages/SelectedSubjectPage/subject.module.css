@@ -14,33 +14,6 @@
     --corAzulMarinho: #36407C;
 }
 
-.menu-perfil {
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    margin: 50px 76px 20px 0px;
-}
-
-
-/*BARRA DE HISTORICO*/
-.barra-historico {
-    /* border: 1px solid green; */
-    margin: 30px 300px;
-}
-
-.barra-historico > span > a:hover {
-    color: var(--corBotaoPeriodo);
-}
-
-.barra-historico > span > a {
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--corEducad);
-    text-transform: capitalize;
-}
-
-
 /*BLOCO IMAGEM*/
 .dados-basicos {
     display: flex;

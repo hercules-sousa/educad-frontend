@@ -1,23 +1,14 @@
 import styles from "./message.module.css";
 
 import NavBar from "../../components/NavBar";
+import HistoryBar from "../../components/HistoryBar";
 
 const MessagePage = () => {
   return (
     <>
       <NavBar />
 
-      <div className={styles["barra-historico"]}>
-          <span className={styles["tela-inicial"]}><a href="tela-inicial.html">Home</a></span>
-          <span className={styles["sinal-ultimo-visitado"]}>&gt;</span>
-          <span className={styles["ultima-area-visitada"]}><a href="tela-inicial.html .conteiner2">Software</a></span>
-          <span className={styles["sinal-ultimo-visitado"]}>&gt;</span>
-          <span className={styles["ultima-disciplina-visitada"]}><a href="disciplinas-software.html">Disciplina</a></span>
-          <span className={styles["sinal-ultimo-visitado"]}>&gt;</span>
-          <span className={styles["disciplina-atual"]}><a href="disciplina-selecionada-material.html">Teste de Software</a></span>
-          <span className={styles["sinal-ultimo-visitado"]}>&gt;</span>
-          <span ><a href="#">Turma</a></span>
-      </div>
+      <HistoryBar />
 
       <div className={styles["dados-basicos-alunos"]}>
           <div className={styles["imagem-aluno"]}>

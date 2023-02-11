@@ -22,13 +22,6 @@
     /* border: 1px solid red; */
 }
 
-.menu-perfil {
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    margin: 50px 76px 20px 0px;
-}
-
 /**/
 .so-para-alinhar {
     display: flex;
