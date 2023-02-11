@@ -1,5 +1,12 @@
-import react from "react";
 import "./styles.css";
+
+import GroupImage from '../../assets/Group-26.png';
+import EditalImage from '../../assets/image-3.png';
+import InternshipImage from '../../assets/monitoring-1.png';
+import SoftwareImage from '../../assets/Rectangle-40.png';
+import HardwareImage from '../../assets/Rectangle-41.png';
+import ExatasImage from '../../assets/Rectangle-42.png';
+import HumanasImage from '../../assets/Rectangle-50.png';
 
 const Home = () => {
   return (
@@ -39,7 +46,7 @@ const Home = () => {
 
           <img
             className="imagem-boas-vindas"
-            src="assets/imagens/Group 26.png"
+            src={GroupImage}
             alt=""
           />
         </div>
@@ -53,25 +60,25 @@ const Home = () => {
           <div className="lista-areas">
             <div>
               <a className="materia-software" href="disciplinas-software.html">
-                <img src="assets/imagens/Rectangle 40.png" alt="" />
+                <img src={SoftwareImage} alt="" />
                 software
               </a>
             </div>
             <div>
               <a className="materia-hardware" href="#">
-                <img src="assets/imagens/Rectangle 41.png" alt="" />
+                <img src={HardwareImage} alt="" />
                 hardware
               </a>
             </div>
             <div>
               <a className="materia-exatas" href="disciplinas-exatas.html ">
-                <img src="assets/imagens/Rectangle 42.png" alt="" />
+                <img src={ExatasImage} alt="" />
                 exatas
               </a>
             </div>
             <div>
               <a className="materia-humanas" href="disciplinas-humanas.html">
-                <img src="assets/imagens/Rectangle 50 (1).png" alt="" />
+                <img src={HumanasImage} alt="" />
                 humanas
               </a>
             </div>
@@ -95,7 +102,7 @@ const Home = () => {
             </a>
           </div>
           <div className="imagem-edital">
-            <img src="assets/imagens/image 3.png" alt="" />
+            <img src={EditalImage} alt="" />
           </div>
         </div>
 
@@ -115,7 +122,7 @@ const Home = () => {
             </a>
           </div>
           <div className="imagem-edital">
-            <img src="assets/imagens/monitoring 1.png" alt="" />
+            <img src={InternshipImage} alt="" />
           </div>
         </div>
       </div>
