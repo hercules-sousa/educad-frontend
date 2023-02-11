@@ -4,8 +4,8 @@ import styles from "./subject.module.css";
 
 import NavBar from "../../components/NavBar";
 
-import SubjectImage from '../../assets/Imagem-dados-disciplina.png';
 import HistoryBar from "../../components/HistoryBar";
+import SubjectData from "../../components/SubjectData";
 
 const SelectedSubjectPage = () => {
   const OPTION_MATERIAIS = 1;
@@ -20,28 +20,7 @@ const SelectedSubjectPage = () => {
 
       <HistoryBar />
 
-      <div className={styles["dados-basicos"]}>
-        <div className={styles["imagem-disiciplina"]}>
-          <img src={SubjectImage} alt="" />
-        </div>
-
-        <div className={styles["dados-disciplinas"]}>
-          <div className={styles["so-para-alinhar"]}>
-            <div>
-                <span>Disciplina: </span><p className={styles["nome-disciplina"]}>Teste de Software</p>
-            </div>
-            <div>
-                <span>Professor(a): </span><p className={styles["professor-disciplina"]}>Mirna da Silva</p>
-            </div>
-            <div>
-                <span>Contato: </span><p className={styles["email-professor"]}>mirna.silva@ifpb.edu.br</p>
-            </div>
-            <div>
-                <span>Curso: </span><p className={styles["nome-curso"]}>Engenharia da Computação</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <SubjectData />
 
       <div className={styles["opcoes-disciplina"]}>
         <div className={selectedOption === OPTION_MATERIAIS ? styles["opcao-ativa"] : ""}>

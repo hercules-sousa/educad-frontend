@@ -4,12 +4,14 @@ export const StyledDiv = styled.div`
   margin: 30px 300px;
 `
 
-export const StyledA = styled.a`
+export const StyledSpan = styled.span`
   font-size: 20px;
+`
+
+export const StyledA = styled.a`
   font-weight: bold;
   text-decoration: none;
   color: var(--corEducad);
-  text-transform: capitalize;
 
   &:hover {
     color: var(--corBotaoPeriodo);

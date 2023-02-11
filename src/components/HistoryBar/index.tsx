@@ -1,4 +1,4 @@
-import { StyledA, StyledDiv } from "./styles";
+import { StyledA, StyledDiv, StyledSpan } from "./styles";
 import HistoryBarProps from "./types";
 
 const HistoryBar: React.FC<HistoryBarProps> = ({
@@ -6,15 +6,15 @@ const HistoryBar: React.FC<HistoryBarProps> = ({
 }) => {
   return (
     <StyledDiv style={additionalStyle}>
-      <span><StyledA href="#">Home</StyledA></span>
-      <span>&gt;</span>
-      <span><StyledA href="#">Software</StyledA></span>
-      <span>&gt;</span>
-      <span><StyledA href="#">Disciplina</StyledA></span>
-      <span>&gt;</span>
-      <span><StyledA href="#">Teste de Software</StyledA></span>
-      <span>&gt;</span>
-      <span><StyledA href="#">Material</StyledA></span>
+      <StyledSpan><StyledA href="#">Home</StyledA></StyledSpan>
+      <StyledSpan> &gt; </StyledSpan>
+      <StyledSpan><StyledA href="#">Software</StyledA></StyledSpan>
+      <StyledSpan> &gt; </StyledSpan>
+      <StyledSpan><StyledA href="#">Disciplina</StyledA></StyledSpan>
+      <StyledSpan> &gt; </StyledSpan>
+      <StyledSpan><StyledA href="#">Teste de Software</StyledA></StyledSpan>
+      <StyledSpan> &gt; </StyledSpan>
+      <StyledSpan><StyledA href="#">Material</StyledA></StyledSpan>
     </StyledDiv>
   );
 };
