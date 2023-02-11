@@ -32,23 +32,9 @@
   margin-bottom: 30px;
 }
 
-.login-form p,
-a {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #000000;
-}
-
 .login-form a {
   text-decoration: none;
   color: #2e81ff;
-}
-
-.login-form p {
-  text-decoration: none;
-  /*   color: #2E81FF; */
-  margin-top: 25px;
 }
 
 .campos-login {

@@ -25,6 +25,7 @@ const EyeButton: React.FC<EyeButtonProps> = ({ onClick }) => {
 };
 
 const Input: React.FC<InputProps> = ({
+  additionalStyle,
   placeholder,
   leftIcon,
   rightIcon,
@@ -35,7 +36,7 @@ const Input: React.FC<InputProps> = ({
   const [eyeOn, setEyeOn] = useState<boolean>(false);
 
   return (
-    <StyledDiv>
+    <StyledDiv style={additionalStyle}>
       {leftIcon && (
         <StyledImg src={leftIcon} alt="Ícone" width={16} left={24} />
       )}

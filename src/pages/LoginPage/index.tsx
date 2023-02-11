@@ -1,6 +1,9 @@
-import { FormEvent, SyntheticEvent, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import Input from "../../components/Input";
+import Button from "../../components/Button";
+
 import EmailIcon from "../../assets/icons/email.svg";
 import LockIcon from "../../assets/icons/lock.svg";
 
@@ -16,18 +19,16 @@ const LoginPage = () => {
   const authContext = useAuth();
   const navigate = useNavigate();
 
-  const handleLoginSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-
+  const handleLoginSubmit = async () => {
     console.log(login);
 
-    /* try {
+    try {
       authContext.signIn(login, senha, () => navigate("home"));
 
       alert("Login realizado com sucesso!");
     } catch (error) {
       alert("Falha ao realizar login.");
-    } */
+    }
   };
 
   return (
@@ -46,6 +47,9 @@ const LoginPage = () => {
             />
 
             <Input
+              additionalStyle={{
+                marginTop: 20,
+              }}
               placeholder="Senha"
               leftIcon={LockIcon}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -53,6 +57,14 @@ const LoginPage = () => {
               }
               type="password"
               rightIcon
+            />
+
+            <Button
+              additionalStyle={{
+                marginTop: 20,
+              }}
+              onClick={() => handleLoginSubmit()}
+              text="Entrar"
             />
           </StyledInputContainer>
         </StyledForm>

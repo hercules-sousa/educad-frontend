@@ -11,5 +11,7 @@ export const StyledForm = styled.form`
 `
 
 export const StyledInputContainer = styled.div`
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `
