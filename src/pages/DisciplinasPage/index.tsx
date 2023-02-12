@@ -10,7 +10,7 @@ const DisciplinasPage = () => {
       <NavBar />
 
       <div className="container-disciplinas">
-        <h2>Disciplinas do semestre</h2>
+        <h2 className="semester-subjects">Disciplinas do semestre</h2>
         <div className="lista-disciplinas">
           <div className="disciplina correcao-disciplinas">
             <a href="">

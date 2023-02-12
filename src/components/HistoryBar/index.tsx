@@ -8,13 +8,11 @@ const HistoryBar: React.FC<HistoryBarProps> = ({
     <StyledDiv style={additionalStyle}>
       <StyledSpan><StyledA href="#">Home</StyledA></StyledSpan>
       <StyledSpan> &gt; </StyledSpan>
+      <StyledSpan><StyledA href="#">Disciplinas</StyledA></StyledSpan>
+      <StyledSpan> &gt; </StyledSpan>
       <StyledSpan><StyledA href="#">Software</StyledA></StyledSpan>
       <StyledSpan> &gt; </StyledSpan>
-      <StyledSpan><StyledA href="#">Disciplina</StyledA></StyledSpan>
-      <StyledSpan> &gt; </StyledSpan>
       <StyledSpan><StyledA href="#">Teste de Software</StyledA></StyledSpan>
-      <StyledSpan> &gt; </StyledSpan>
-      <StyledSpan><StyledA href="#">Material</StyledA></StyledSpan>
     </StyledDiv>
   );
 };
