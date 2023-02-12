@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledNav = styled.nav`
+  background-color: var(--corEducad);
   display: flex;
   justify-content: space-between;
 `
@@ -9,7 +10,7 @@ export const StyledImg = styled.img`
   border-radius: 50%;
   width: 70px;
   height: 70px;
-  margin: 50px 76px 20px 0px;
+  margin: 50px 75px 20px 0px;
 `
 
 export const StyledLink = styled.a`

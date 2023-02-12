@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const StyledDiv = styled.div`
-  margin: 30px 300px;
+  margin: 60px auto;
+  width: 880px;
 `
 
 export const StyledSpan = styled.span`
@@ -9,7 +10,7 @@ export const StyledSpan = styled.span`
 `
 
 export const StyledA = styled.a`
-  font-weight: bold;
+  font-weight: 500;
   text-decoration: none;
   color: var(--corEducad);
 
