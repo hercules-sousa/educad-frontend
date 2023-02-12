@@ -10,6 +10,12 @@ export const DataContainer = styled.div`
   background-color: var(--corTexto);
   width: 880px;
   border-radius: 20px;
+  height: 330px;
+`
+
+export const SubjectImage = styled.img`
+  border-radius: 20px 0 0 20px;
+  width: 300px;
 `
 
 export const DataDiv = styled.div`

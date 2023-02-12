@@ -14,6 +14,7 @@ import {
   StudentName,
   StyledP,
   StyledSpan,
+  SubjectImage,
   SubjectOptionButton,
   SubjectOptionsContainer
 } from "./styles";
@@ -23,17 +24,13 @@ import HistoryBar from "../../components/HistoryBar";
 
 import SubjectDataProps from "./types";
 
-import SubjectImage from '../../assets/Imagem-dados-disciplina.png';
-
 const SubjectData: React.FC<SubjectDataProps> = ({
   additionalStyle,
 }) => {
   return (
     <Container>
       <DataContainer>
-        <div>
-          <img src={SubjectImage} alt="" />
-        </div>
+        <SubjectImage src="https://source.unsplash.com/330x330/?programming-screen" alt="" />
 
         <DataDiv>
           <div>
