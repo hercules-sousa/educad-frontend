@@ -7,6 +7,7 @@ export default interface InputProps {
   onChange?: ChangeEventHandler<HTMLInputElement>;
   type?: string;
   rightIcon?: ReactNode;
+  marginTop?: number;
 }
 
 interface EyeButtonProps {

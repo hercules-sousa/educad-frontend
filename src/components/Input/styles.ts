@@ -27,12 +27,17 @@ export const StyledInput = styled.input<StyledInputProps>`
   }
 `
 
-export const StyledDiv = styled.div`
+interface StyledDivProps {
+  marginTop?: number;
+}
+
+export const StyledDiv = styled.div<StyledDivProps>`
   display: flex;
   position: relative;
   align-items: center;
   width: 495px;
   height: 54px;
+  margin-top: ${props => `${props.marginTop}px` || 0};
 `
 
 interface StyledPositionProps {

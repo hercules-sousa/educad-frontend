@@ -1,13 +1,20 @@
 import styled from 'styled-components';
 
-export const StyledButton = styled.button`
+interface StyledButtonProps {
+  backgroundColor?: string;
+  marginTop?: number;
+  width?: string;
+}
+
+export const StyledButton = styled.button<StyledButtonProps>`
   align-items: center;
-  background-color: #1b1d2a;
+  background-color: ${props => props.backgroundColor || "#1b1d2a"};
   cursor: pointer;
   display: flex;
   justify-content: center;
   height: 54px;
-  width: 100%;
+  width: ${props => props.width || "auto"};
+  margin-top: ${props => `${props.marginTop}px` || 0}
 `
 
 export const StyledP = styled.p`

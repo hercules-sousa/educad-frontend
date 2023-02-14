@@ -25,18 +25,18 @@ const EyeButton: React.FC<EyeButtonProps> = ({ onClick }) => {
 };
 
 const Input: React.FC<InputProps> = ({
-  additionalStyle,
   placeholder,
   leftIcon,
   rightIcon,
   onChange,
   type,
+  marginTop,
 }) => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [eyeOn, setEyeOn] = useState<boolean>(false);
 
   return (
-    <StyledDiv style={additionalStyle}>
+    <StyledDiv marginTop={marginTop}>
       {leftIcon && (
         <StyledImg src={leftIcon} alt="Ícone" width={16} left={24} />
       )}

@@ -1,16 +1,9 @@
 import { StyledButton, StyledP } from "./styles";
 import ButtonProps from "./types";
 
-const Button: React.FC<ButtonProps> = ({
-  additionalStyle,
-  onClick,
-  text,
-}) => {
+const Button: React.FC<ButtonProps> = ({ onClick, text, marginTop }) => {
   return (
-    <StyledButton
-      onClick={onClick}
-      style={additionalStyle}
-    >
+    <StyledButton onClick={onClick} marginTop={marginTop}>
       <StyledP>{text}</StyledP>
     </StyledButton>
   );

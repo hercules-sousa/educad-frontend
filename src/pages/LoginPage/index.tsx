@@ -55,9 +55,6 @@ const LoginPage = () => {
             />
 
             <Input
-              additionalStyle={{
-                marginTop: 20,
-              }}
               placeholder="Senha"
               leftIcon={LockIcon}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -65,14 +62,13 @@ const LoginPage = () => {
               }
               type="password"
               rightIcon
+              marginTop={20}
             />
 
             <Button
-              additionalStyle={{
-                marginTop: 20,
-              }}
               onClick={() => handleLoginSubmit()}
               text="Entrar"
+              marginTop={20}
             />
           </StyledInputContainer>
         </StyledForm>
