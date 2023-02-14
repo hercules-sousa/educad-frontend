@@ -5,7 +5,14 @@ import { useAuth } from "../../services/auth";
 
 import "./styles.css";
 
-import { StyledForm, StyledInputContainer } from "./styles";
+import {
+  StyledForm,
+  StyledInputContainer,
+  StyledLogoContainer,
+  StyledSlogan,
+  StyledTitle,
+  StyledWelcome,
+} from "./styles";
 
 import Input from "../../components/Input";
 import Button from "../../components/Button";
@@ -36,7 +43,7 @@ const LoginPage = () => {
     <div className="grid">
       <div className="login-form">
         <StyledForm>
-          <h2>Bem-vindo(a) de volta!</h2>
+          <StyledWelcome>Bem-vindo(a) de volta!</StyledWelcome>
 
           <StyledInputContainer>
             <Input
@@ -71,12 +78,12 @@ const LoginPage = () => {
         </StyledForm>
       </div>
 
-      <div className="login-visual">
-        <h1>
-          <b>Edu</b>cad
-        </h1>
-        <p>acesse suas atividades, se organize e se torne um aluno melhor</p>
-      </div>
+      <StyledLogoContainer>
+        <StyledTitle>Educad</StyledTitle>
+        <StyledSlogan>
+          acesse suas atividades, se organize e se torne um aluno melhor
+        </StyledSlogan>
+      </StyledLogoContainer>
     </div>
   );
 };
