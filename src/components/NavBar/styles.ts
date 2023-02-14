@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const StyledNav = styled.nav`
@@ -13,7 +14,7 @@ export const StyledImg = styled.img`
   margin: 50px 75px 20px 0px;
 `
 
-export const StyledLink = styled.a`
+export const StyledLink = styled(Link)`
   font-size: 40px;
   margin: 65px 0px 20px 65px;
   text-decoration: none;

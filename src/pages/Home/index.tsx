@@ -4,13 +4,13 @@ import "./styles.css";
 
 import NavBar from "../../components/NavBar";
 
-import GroupImage from '../../assets/Group-26.png';
-import EditalImage from '../../assets/image-3.png';
-import InternshipImage from '../../assets/monitoring-1.png';
-import SoftwareImage from '../../assets/Rectangle-40.png';
-import HardwareImage from '../../assets/Rectangle-41.png';
-import ExatasImage from '../../assets/Rectangle-42.png';
-import HumanasImage from '../../assets/Rectangle-50.png';
+import GroupImage from "../../assets/Group-26.png";
+import EditalImage from "../../assets/image-3.png";
+import InternshipImage from "../../assets/monitoring-1.png";
+import SoftwareImage from "../../assets/Rectangle-40.png";
+import HardwareImage from "../../assets/Rectangle-41.png";
+import ExatasImage from "../../assets/Rectangle-42.png";
+import HumanasImage from "../../assets/Rectangle-50.png";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -45,11 +45,7 @@ const Home = () => {
             </div>
           </div>
 
-          <img
-            className="imagem-boas-vindas"
-            src={GroupImage}
-            alt=""
-          />
+          <img className="imagem-boas-vindas" src={GroupImage} alt="" />
         </div>
       </div>
 
