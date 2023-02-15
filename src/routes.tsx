@@ -6,7 +6,11 @@ import DisciplinasPage from "./pages/DisciplinasPage";
 import SelectedSubjectPage from "./pages/SelectedSubjectPage";
 import MessagePage from "./pages/MessagePage";
 
-import { AuthContextProvider, RequireAuth, RequireNoAuth } from "./services/auth";
+import {
+  AuthContextProvider,
+  RequireAuth,
+  RequireNoAuth,
+} from "./services/auth";
 
 function Router() {
   return (

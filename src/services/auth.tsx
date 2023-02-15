@@ -58,6 +58,7 @@ const RequireAuth = ({ children }: { children: JSX.Element }) => {
   const auth = useAuth();
   const location = useLocation();
 
+  // TODO ─ Realizar uma requisição de verdade para o back para saber se o usuário está autenticado
   if (!auth.getToken()) {
     return <Navigate to="/" state={{ from: location }} replace />;
   }

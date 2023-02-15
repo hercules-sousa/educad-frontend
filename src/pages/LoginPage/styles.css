@@ -1,12 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap");
 
-* {
-  font-family: "Inter";
-  font-style: normal;
-  margin: 0;
-  padding: 0;
-}
-
 .grid {
   display: grid;
   justify-content: center; /*Centraliza horizontalmente*/
@@ -18,36 +11,15 @@
 .login-form {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 100vh;
   flex-direction: column;
   margin: auto;
 }
 
-.login-form h2 {
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 39px;
-  color: #1b1d2a;
-  margin-bottom: 30px;
-}
-
-.login-form p,
-a {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #000000;
-}
-
 .login-form a {
   text-decoration: none;
   color: #2e81ff;
-}
-
-.login-form p {
-  text-decoration: none;
-  /*   color: #2E81FF; */
-  margin-top: 25px;
 }
 
 .campos-login {
@@ -68,7 +40,7 @@ a {
   padding: 0px 0px 0px 62px;
   font-weight: 400;
   font-size: 16px;
-  color: #9a9a9a;
+  color: #a6a6a6;
   transition: 0.3s;
 }
 
@@ -121,17 +93,6 @@ a {
 .btn-login:hover {
   background-color: #b3b0bf;
   color: #1b1d2a;
-}
-
-/*Logo educad e slogan*/
-.login-visual {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: linear-gradient(180deg, #1b1d2a 0%, #211a30 100%);
-  color: #fff;
-  width: 100%;
 }
 
 .login-visual h1 {

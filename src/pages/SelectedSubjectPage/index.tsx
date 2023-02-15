@@ -1,8 +1,57 @@
 import { useState } from "react";
 
-import styles from "./subject.module.css";
+import {
+  Collection,
+  Container,
+  DataContainer,
+  DataDiv,
+  LineDiv,
+  SectionBlock,
+  SectionGrid,
+  SectionTitle,
+  StudentBlock,
+  StudentImage,
+  StudentName,
+  StyledP,
+  StyledSpan,
+  SubjectImage,
+  SubjectOptionButton,
+  SubjectOptionsContainer
+} from "./styles";
 
-import SubjectImage from '../../assets/Imagem-dados-disciplina.png';
+import NavBar from "../../components/NavBar";
+import HistoryBar from "../../components/HistoryBar";
+
+import SubjectDataProps from "./types";
+
+const SubjectData: React.FC<SubjectDataProps> = ({
+  additionalStyle,
+}) => {
+  return (
+    <Container>
+      <DataContainer>
+        <SubjectImage src="https://source.unsplash.com/330x330/?programming-screen" alt="" />
+
+        <DataDiv>
+          <div>
+            <LineDiv>
+                <StyledSpan>Disciplina: </StyledSpan><StyledP>Teste de Software</StyledP>
+            </LineDiv>
+            <LineDiv>
+                <StyledSpan>Professor(a): </StyledSpan><StyledP>Mirna da Silva</StyledP>
+            </LineDiv>
+            <LineDiv>
+                <StyledSpan>Contato: </StyledSpan><StyledP>mirna.silva@ifpb.edu.br</StyledP>
+            </LineDiv>
+            <LineDiv>
+                <StyledSpan>Curso: </StyledSpan><StyledP>Engenharia da Computação</StyledP>
+            </LineDiv>
+          </div>
+        </DataDiv>
+      </DataContainer>
+    </Container>
+  );
+};
 
 const SelectedSubjectPage = () => {
   const OPTION_MATERIAIS = 1;
@@ -13,115 +62,126 @@ const SelectedSubjectPage = () => {
 
   return (
     <>
-      <nav className={styles["menu"]}>
-          <a href="tela-inicial.html"><span className={styles["menu-logo"]}>Edu</span>cad</a>
-          <img alt="Foto perfil" className={styles["menu-perfil"]} src="https://source.unsplash.com/75x75/?teenage-man" />
-      </nav>
+      <NavBar />
 
-      <div className={styles["barra-historico"]}>
-          <span className={styles["tela-inicial"]}><a href="tela-inicial.html">Home</a></span>
-          <span className={styles["sinal-ultimo-visitado"]}>&gt;</span>
-          <span className={styles["ultima-area-visitada"]}><a href="tela-inicial.html .conteiner2">Software</a></span>
-          <span className={styles["sinal-ultimo-visitado"]}>&gt;</span>
-          <span className={styles["ultima-disciplina-visitada"]}><a href="disciplinas-software.html">Disciplina</a></span>
-          <span className={styles["sinal-ultimo-visitado"]}>&gt;</span>
-          <span className={styles["disciplina-atual"]}><a href="disciplina-selecionada-material.html">Teste de Software</a></span>
-          <span className={styles["sinal-ultimo-visitado"]}>&gt;</span>
-          <span ><a href="#">Material</a></span>
-      </div>
+      <HistoryBar />
 
-      <div className={styles["dados-basicos"]}>
-        <div className={styles["imagem-disiciplina"]}>
-          <img src={SubjectImage} alt="" />
-        </div>
+      <SubjectData />
 
-        <div className={styles["dados-disciplinas"]}>
-          <div className={styles["so-para-alinhar"]}>
-            <div>
-                <span>Disciplina: </span><p className={styles["nome-disciplina"]}>Teste de Software</p>
-            </div>
-            <div>
-                <span>Professor(a): </span><p className={styles["professor-disciplina"]}>Mirna da Silva</p>
-            </div>
-            <div>
-                <span>Contato: </span><p className={styles["email-professor"]}>mirna.silva@ifpb.edu.br</p>
-            </div>
-            <div>
-                <span>Curso: </span><p className={styles["nome-curso"]}>Engenharia da Computação</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <SubjectOptionsContainer>
+        <SubjectOptionButton
+          style={selectedOption === OPTION_MATERIAIS ? { backgroundColor: "#1B1D2A" } : {}}
+          type="button"
+          onClick={() => setSelectedOption(OPTION_MATERIAIS)}
+        >
+          Materiais
+        </SubjectOptionButton>
 
-      <div className={styles["opcoes-disciplina"]}>
-        <div className={selectedOption === OPTION_MATERIAIS ? styles["opcao-ativa"] : ""}>
-          <button type="button" onClick={() => setSelectedOption(OPTION_MATERIAIS)}>Materiais</button>
-        </div>
-        <div className={selectedOption === OPTION_ATIVIDADES ? styles["opcao-ativa"] : ""}>
-          <button type="button" onClick={() => setSelectedOption(OPTION_ATIVIDADES)}>Atividades</button>
-        </div>
-        <div className={selectedOption === OPTION_TURMA ? styles["opcao-ativa"] : ""}>
-          <button type="button" onClick={() => setSelectedOption(OPTION_TURMA)}>Turma</button>
-        </div>
-      </div>
+        <SubjectOptionButton
+          style={selectedOption === OPTION_ATIVIDADES ? { backgroundColor: "#1B1D2A" } : {}}
+          type="button"
+          onClick={() => setSelectedOption(OPTION_ATIVIDADES)}
+        >
+          Atividades
+        </SubjectOptionButton>
+
+        <SubjectOptionButton
+          style={selectedOption === OPTION_TURMA ? { backgroundColor: "#1B1D2A" } : {}}
+          type="button"
+          onClick={() => setSelectedOption(OPTION_TURMA)}
+        >
+          Turma
+        </SubjectOptionButton>
+      </SubjectOptionsContainer>
 
       {selectedOption === OPTION_MATERIAIS ? (
         <>
-          <h2>vídeos</h2>
+          <SectionTitle>Vídeos</SectionTitle>
 
-          <div className={styles["videos"]}>        
-            <div className={styles["colecao"]}>
-              <div className={styles["video1"]}>Vídeo 1</div>
-              <div className={styles["video2"]}>Vídeo 2</div>
-              <div className={styles["video3"]}>Vídeo 3</div>
-            </div>
-          </div>
+          <SectionGrid>        
+            <Collection>
+              <SectionBlock>Vídeo 1</SectionBlock>
+              <SectionBlock>Vídeo 2</SectionBlock>
+              <SectionBlock>Vídeo 3</SectionBlock>
+            </Collection>
+          </SectionGrid>
 
-          <h2>slides</h2>
+          <SectionTitle>Slides</SectionTitle>
 
-          <div className={styles["slides"]}>        
-            <div className={styles["colecao"]}>
-              <div className={styles["slide1"]}>Slide 1</div>
-              <div className={styles["slide2"]}>Slide 2</div>
-              <div className={styles["slide3"]}>Slide 3</div>
-            </div>
-          </div>
+          <SectionGrid>        
+            <Collection>
+              <SectionBlock>Slide 1</SectionBlock>
+              <SectionBlock>Slide 2</SectionBlock>
+              <SectionBlock>Slide 3</SectionBlock>
+            </Collection>
+          </SectionGrid>
 
-          <h2>materiais escritos</h2>
+          <SectionTitle>Materiais escritos</SectionTitle>
 
-          <div className={styles["materiais"]}>        
-            <div className={styles["colecao"]}>
-              <div className={styles["material1"]}>Material 1</div>
-              <div className={styles["material2"]}>Material 2</div>
-              <div className={styles["material3"]}>Material 3</div>
-            </div>
-          </div>
+          <SectionGrid>        
+            <Collection>
+              <SectionBlock>Material 1</SectionBlock>
+              <SectionBlock>Material 2</SectionBlock>
+              <SectionBlock>Material 3</SectionBlock>
+            </Collection>
+          </SectionGrid>
         </>
       ) : selectedOption === OPTION_ATIVIDADES ? (
         <>
-          <h2>atividades</h2>
+          <SectionTitle>Atividades</SectionTitle>
 
-          <div className={styles["atividade"]}>        
-              <div className={styles["colecao"]}>
-                  <div className={styles["atividade1"]}>Atividade 1</div>
-                  <div className={styles["atividade2"]}>Atividade 2</div>
-                  <div className={styles["atividade3"]}>Atividade 3</div>
-              </div>
-          </div>
+          <SectionGrid>        
+            <Collection>
+              <SectionBlock>Atividade 1</SectionBlock>
+              <SectionBlock>Atividade 2</SectionBlock>
+              <SectionBlock>Atividade 3</SectionBlock>
+            </Collection>
+          </SectionGrid>
         </>
       ) : (
         selectedOption === OPTION_TURMA &&
           <>
-            <h2>turma</h2>
+            <SectionTitle>Turma</SectionTitle>
 
-            <div className={styles["turma"]}>        
-                <div className="colecao colecao-turma">
-                    <div className={styles["alunos"]}><img src="https://source.unsplash.com/250x350/?profile-boy" alt="" /><p>Nome</p></div>
-                    <div className={styles["alunos"]}><img src="https://source.unsplash.com/250x350/?profile-girl" alt="" /><p>Nome</p></div>
-                    <div className={styles["alunos"]}><img src="https://source.unsplash.com/250x350/?profile-woman" alt="" /><p>Nome</p></div>
-                    <div className={styles["alunos"]}><img src="https://source.unsplash.com/250x350/?profile-man" alt="" /><p>Nome</p></div>
-                </div>
-            </div>
+            <SectionGrid>        
+              <Collection>
+                <StudentBlock>
+                  <StudentImage src="https://source.unsplash.com/250x350/?profile-boy" alt="" />
+
+                  <StudentName>Nome</StudentName>
+                </StudentBlock>
+
+                <StudentBlock>
+                  <StudentImage src="https://source.unsplash.com/250x350/?profile-girl" alt="" />
+
+                  <StudentName>Nome</StudentName>
+                </StudentBlock>
+
+                <StudentBlock>
+                  <StudentImage src="https://source.unsplash.com/250x350/?profile-woman" alt="" />
+
+                  <StudentName>Nome</StudentName>
+                </StudentBlock>
+
+                <StudentBlock>
+                  <StudentImage src="https://source.unsplash.com/250x350/?profile-man" alt="" />
+                  
+                  <StudentName>Nome</StudentName>
+                </StudentBlock>
+
+                <StudentBlock>
+                  <StudentImage src="https://source.unsplash.com/250x350/?profile-teenage-boy" alt="" />
+                  
+                  <StudentName>Nome</StudentName>
+                </StudentBlock>
+
+                <StudentBlock>
+                  <StudentImage src="https://source.unsplash.com/250x350/?profile-teenage-girl" alt="" />
+                  
+                  <StudentName>Nome</StudentName>
+                </StudentBlock>
+              </Collection>
+            </SectionGrid>
           </>
       )}
     </>

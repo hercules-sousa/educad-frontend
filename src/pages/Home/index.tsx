@@ -1,20 +1,24 @@
-import react from "react";
+import { useNavigate } from "react-router-dom";
+
 import "./styles.css";
 
+import NavBar from "../../components/NavBar";
+
+import GroupImage from "../../assets/Group-26.png";
+import EditalImage from "../../assets/image-3.png";
+import InternshipImage from "../../assets/monitoring-1.png";
+import SoftwareImage from "../../assets/Rectangle-40.png";
+import HardwareImage from "../../assets/Rectangle-41.png";
+import ExatasImage from "../../assets/Rectangle-42.png";
+import HumanasImage from "../../assets/Rectangle-50.png";
+
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="container">
-        <nav className="menu">
-          <a href="#">
-            <span className="menu-logo">Edu</span>cad
-          </a>
-          <img
-            alt="Foto perfil"
-            className="menu-perfil"
-            src="https://source.unsplash.com/75x75/?teenage-man"
-          />
-        </nav>
+        <NavBar />
 
         <div className="so-para-alinhar">
           <div className="boas-vindas">
@@ -28,7 +32,11 @@ const Home = () => {
               engagement and monetization with better mobile campaigns
             </p>
             <div className="botoes">
-              <button type="button" className="turmas-virtuais">
+              <button
+                type="button"
+                className="turmas-virtuais"
+                onClick={() => navigate("/disciplinas")}
+              >
                 Minhas turmas virtuais
               </button>
               <button type="button" className="meus-estudos">
@@ -37,11 +45,7 @@ const Home = () => {
             </div>
           </div>
 
-          <img
-            className="imagem-boas-vindas"
-            src="assets/imagens/Group 26.png"
-            alt=""
-          />
+          <img className="imagem-boas-vindas" src={GroupImage} alt="" />
         </div>
       </div>
 
@@ -53,25 +57,25 @@ const Home = () => {
           <div className="lista-areas">
             <div>
               <a className="materia-software" href="disciplinas-software.html">
-                <img src="assets/imagens/Rectangle 40.png" alt="" />
+                <img src={SoftwareImage} alt="" />
                 software
               </a>
             </div>
             <div>
               <a className="materia-hardware" href="#">
-                <img src="assets/imagens/Rectangle 41.png" alt="" />
+                <img src={HardwareImage} alt="" />
                 hardware
               </a>
             </div>
             <div>
               <a className="materia-exatas" href="disciplinas-exatas.html ">
-                <img src="assets/imagens/Rectangle 42.png" alt="" />
+                <img src={ExatasImage} alt="" />
                 exatas
               </a>
             </div>
             <div>
               <a className="materia-humanas" href="disciplinas-humanas.html">
-                <img src="assets/imagens/Rectangle 50 (1).png" alt="" />
+                <img src={HumanasImage} alt="" />
                 humanas
               </a>
             </div>
@@ -95,7 +99,7 @@ const Home = () => {
             </a>
           </div>
           <div className="imagem-edital">
-            <img src="assets/imagens/image 3.png" alt="" />
+            <img src={EditalImage} alt="" />
           </div>
         </div>
 
@@ -115,7 +119,7 @@ const Home = () => {
             </a>
           </div>
           <div className="imagem-edital">
-            <img src="assets/imagens/monitoring 1.png" alt="" />
+            <img src={InternshipImage} alt="" />
           </div>
         </div>
       </div>
