@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import "./styles.css";
 
 import NavBar from "../../components/NavBar";
-
 import GroupImage from "../../assets/Group-26.png";
 import EditalImage from "../../assets/image-3.png";
 import InternshipImage from "../../assets/monitoring-1.png";
@@ -11,16 +10,17 @@ import SoftwareImage from "../../assets/Rectangle-40.png";
 import HardwareImage from "../../assets/Rectangle-41.png";
 import ExatasImage from "../../assets/Rectangle-42.png";
 import HumanasImage from "../../assets/Rectangle-50.png";
+import { StyledContainer, StyledWelcomeContainer } from "./styles";
 
 const Home = () => {
   const navigate = useNavigate();
 
   return (
     <>
-      <div className="container">
+      <StyledContainer>
         <NavBar />
 
-        <div className="so-para-alinhar">
+        <StyledWelcomeContainer>
           <div className="boas-vindas">
             <p className="texto-gradiente-titulo texto-boasvindas">
               Olá, José! Acesse suas turmas e organize seus estudos de forma
@@ -46,8 +46,8 @@ const Home = () => {
           </div>
 
           <img className="imagem-boas-vindas" src={GroupImage} alt="" />
-        </div>
-      </div>
+        </StyledWelcomeContainer>
+      </StyledContainer>
 
       <div className="container2">
         <div className="disciplinas">
