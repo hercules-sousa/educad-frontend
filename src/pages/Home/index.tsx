@@ -10,7 +10,14 @@ import SoftwareImage from "../../assets/Rectangle-40.png";
 import HardwareImage from "../../assets/Rectangle-41.png";
 import ExatasImage from "../../assets/Rectangle-42.png";
 import HumanasImage from "../../assets/Rectangle-50.png";
-import { StyledContainer, StyledWelcomeContainer } from "./styles";
+import {
+  StyledButtonContainer,
+  StyledContainer,
+  StyledWelcome,
+  StyledWelcomeContainer,
+  StyledWelcomeSubtext,
+  StyledWelcomeText,
+} from "./styles";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -21,17 +28,17 @@ const Home = () => {
         <NavBar />
 
         <StyledWelcomeContainer>
-          <div className="boas-vindas">
-            <p className="texto-gradiente-titulo texto-boasvindas">
+          <StyledWelcome>
+            <StyledWelcomeText className="texto-gradiente-titulo texto-boasvindas">
               Olá, José! Acesse suas turmas e organize seus estudos de forma
               eficiente
-            </p>
-            <p className="subtexto">
+            </StyledWelcomeText>
+            <StyledWelcomeSubtext>
               Design in the browser and delivered natively in your app. No dev
               resources or app update is requeired Rover drives mobile
               engagement and monetization with better mobile campaigns
-            </p>
-            <div className="botoes">
+            </StyledWelcomeSubtext>
+            <StyledButtonContainer>
               <button
                 type="button"
                 className="turmas-virtuais"
@@ -42,8 +49,8 @@ const Home = () => {
               <button type="button" className="meus-estudos">
                 Meus estudos
               </button>
-            </div>
-          </div>
+            </StyledButtonContainer>
+          </StyledWelcome>
 
           <img className="imagem-boas-vindas" src={GroupImage} alt="" />
         </StyledWelcomeContainer>
