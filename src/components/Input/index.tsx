@@ -10,6 +10,7 @@ const EyeButton: React.FC<EyeButtonProps> = ({ onClick }) => {
   return (
     <StyledEyeButton
       onClick={(e: SyntheticEvent) => {
+        e.preventDefault();
         setOn(!on);
         onClick(e);
       }}
@@ -33,7 +34,6 @@ const Input: React.FC<InputProps> = ({
   marginTop,
 }) => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
-  const [eyeOn, setEyeOn] = useState<boolean>(false);
 
   return (
     <StyledDiv marginTop={marginTop}>
@@ -51,7 +51,6 @@ const Input: React.FC<InputProps> = ({
         <EyeButton
           onClick={(e: SyntheticEvent) => {
             e.preventDefault();
-            setEyeOn(!eyeOn);
             setShowPassword(!showPassword);
           }}
         />
