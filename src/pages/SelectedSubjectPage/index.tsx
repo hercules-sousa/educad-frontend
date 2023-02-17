@@ -16,7 +16,7 @@ import {
   StyledSpan,
   SubjectImage,
   SubjectOptionButton,
-  SubjectOptionsContainer
+  SubjectOptionsContainer,
 } from "./styles";
 
 import NavBar from "../../components/NavBar";
@@ -24,27 +24,32 @@ import HistoryBar from "../../components/HistoryBar";
 
 import SubjectDataProps from "./types";
 
-const SubjectData: React.FC<SubjectDataProps> = ({
-  additionalStyle,
-}) => {
+const SubjectData: React.FC<SubjectDataProps> = ({ additionalStyle }) => {
   return (
     <Container>
       <DataContainer>
-        <SubjectImage src="https://source.unsplash.com/330x330/?programming-screen" alt="" />
+        <SubjectImage
+          src="https://source.unsplash.com/330x330/?programming-screen"
+          alt=""
+        />
 
         <DataDiv>
           <div>
             <LineDiv>
-                <StyledSpan>Disciplina: </StyledSpan><StyledP>Teste de Software</StyledP>
+              <StyledSpan>Disciplina: </StyledSpan>
+              <StyledP>Teste de Software</StyledP>
             </LineDiv>
             <LineDiv>
-                <StyledSpan>Professor(a): </StyledSpan><StyledP>Mirna da Silva</StyledP>
+              <StyledSpan>Professor(a): </StyledSpan>
+              <StyledP>Mirna da Silva</StyledP>
             </LineDiv>
             <LineDiv>
-                <StyledSpan>Contato: </StyledSpan><StyledP>mirna.silva@ifpb.edu.br</StyledP>
+              <StyledSpan>Contato: </StyledSpan>
+              <StyledP>mirna.silva@ifpb.edu.br</StyledP>
             </LineDiv>
             <LineDiv>
-                <StyledSpan>Curso: </StyledSpan><StyledP>Engenharia da Computação</StyledP>
+              <StyledSpan>Curso: </StyledSpan>
+              <StyledP>Engenharia da Computação</StyledP>
             </LineDiv>
           </div>
         </DataDiv>
@@ -70,7 +75,11 @@ const SelectedSubjectPage = () => {
 
       <SubjectOptionsContainer>
         <SubjectOptionButton
-          style={selectedOption === OPTION_MATERIAIS ? { backgroundColor: "#1B1D2A" } : {}}
+          style={
+            selectedOption === OPTION_MATERIAIS
+              ? { backgroundColor: "#1B1D2A" }
+              : {}
+          }
           type="button"
           onClick={() => setSelectedOption(OPTION_MATERIAIS)}
         >
@@ -78,7 +87,11 @@ const SelectedSubjectPage = () => {
         </SubjectOptionButton>
 
         <SubjectOptionButton
-          style={selectedOption === OPTION_ATIVIDADES ? { backgroundColor: "#1B1D2A" } : {}}
+          style={
+            selectedOption === OPTION_ATIVIDADES
+              ? { backgroundColor: "#1B1D2A" }
+              : {}
+          }
           type="button"
           onClick={() => setSelectedOption(OPTION_ATIVIDADES)}
         >
@@ -86,7 +99,11 @@ const SelectedSubjectPage = () => {
         </SubjectOptionButton>
 
         <SubjectOptionButton
-          style={selectedOption === OPTION_TURMA ? { backgroundColor: "#1B1D2A" } : {}}
+          style={
+            selectedOption === OPTION_TURMA
+              ? { backgroundColor: "#1B1D2A" }
+              : {}
+          }
           type="button"
           onClick={() => setSelectedOption(OPTION_TURMA)}
         >
@@ -98,7 +115,7 @@ const SelectedSubjectPage = () => {
         <>
           <SectionTitle>Vídeos</SectionTitle>
 
-          <SectionGrid>        
+          <SectionGrid>
             <Collection>
               <SectionBlock>Vídeo 1</SectionBlock>
               <SectionBlock>Vídeo 2</SectionBlock>
@@ -108,7 +125,7 @@ const SelectedSubjectPage = () => {
 
           <SectionTitle>Slides</SectionTitle>
 
-          <SectionGrid>        
+          <SectionGrid>
             <Collection>
               <SectionBlock>Slide 1</SectionBlock>
               <SectionBlock>Slide 2</SectionBlock>
@@ -118,7 +135,7 @@ const SelectedSubjectPage = () => {
 
           <SectionTitle>Materiais escritos</SectionTitle>
 
-          <SectionGrid>        
+          <SectionGrid>
             <Collection>
               <SectionBlock>Material 1</SectionBlock>
               <SectionBlock>Material 2</SectionBlock>
@@ -130,7 +147,7 @@ const SelectedSubjectPage = () => {
         <>
           <SectionTitle>Atividades</SectionTitle>
 
-          <SectionGrid>        
+          <SectionGrid>
             <Collection>
               <SectionBlock>Atividade 1</SectionBlock>
               <SectionBlock>Atividade 2</SectionBlock>
@@ -139,53 +156,72 @@ const SelectedSubjectPage = () => {
           </SectionGrid>
         </>
       ) : (
-        selectedOption === OPTION_TURMA &&
+        selectedOption === OPTION_TURMA && (
           <>
             <SectionTitle>Turma</SectionTitle>
 
-            <SectionGrid>        
+            <SectionGrid>
               <Collection>
                 <StudentBlock>
-                  <StudentImage src="https://source.unsplash.com/250x350/?profile-boy" alt="" />
+                  <StudentImage
+                    src="https://source.unsplash.com/250x350/?profile-boy"
+                    alt=""
+                  />
 
                   <StudentName>Nome</StudentName>
                 </StudentBlock>
 
                 <StudentBlock>
-                  <StudentImage src="https://source.unsplash.com/250x350/?profile-girl" alt="" />
+                  <StudentImage
+                    src="https://source.unsplash.com/250x350/?profile-girl"
+                    alt=""
+                  />
 
                   <StudentName>Nome</StudentName>
                 </StudentBlock>
 
                 <StudentBlock>
-                  <StudentImage src="https://source.unsplash.com/250x350/?profile-woman" alt="" />
+                  <StudentImage
+                    src="https://source.unsplash.com/250x350/?profile-woman"
+                    alt=""
+                  />
 
                   <StudentName>Nome</StudentName>
                 </StudentBlock>
 
                 <StudentBlock>
-                  <StudentImage src="https://source.unsplash.com/250x350/?profile-man" alt="" />
-                  
+                  <StudentImage
+                    src="https://source.unsplash.com/250x350/?profile-man"
+                    alt=""
+                  />
+
                   <StudentName>Nome</StudentName>
                 </StudentBlock>
 
                 <StudentBlock>
-                  <StudentImage src="https://source.unsplash.com/250x350/?profile-teenage-boy" alt="" />
-                  
+                  <StudentImage
+                    src="https://source.unsplash.com/250x350/?profile-teenage-boy"
+                    alt=""
+                  />
+
                   <StudentName>Nome</StudentName>
                 </StudentBlock>
 
                 <StudentBlock>
-                  <StudentImage src="https://source.unsplash.com/250x350/?profile-teenage-girl" alt="" />
-                  
+                  <StudentImage
+                    src="https://source.unsplash.com/250x350/?profile-teenage-girl"
+                    alt=""
+                  />
+
                   <StudentName>Nome</StudentName>
                 </StudentBlock>
               </Collection>
             </SectionGrid>
           </>
+        )
       )}
     </>
-    );
+  );
 };
 
 export default SelectedSubjectPage;

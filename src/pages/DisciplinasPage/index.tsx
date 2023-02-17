@@ -17,10 +17,33 @@ import {
   SubjectPageContainer,
   SubjectTitle,
 } from "./styles";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { getDisciplinasByUserId } from "../../services/api";
 
 const DisciplinasPage = () => {
+  const [disciplinas, setDisciplinas] = useState<any>();
+
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const userData = location.state?.userData;
+  const institutionData = location.state?.institutionData;
+
+  console.log("Dados que estão chegando", userData, institutionData);
+
+  useEffect(() => {
+    let disciplinas = null;
+
+    if (userData && institutionData) {
+      disciplinas = getDisciplinasByUserId(
+        userData.userId,
+        institutionData.periodId
+      );
+    }
+
+    setDisciplinas(disciplinas);
+  });
 
   return (
     <>

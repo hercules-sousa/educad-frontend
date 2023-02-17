@@ -52,8 +52,10 @@ const Home = () => {
                 className="turmas-virtuais"
                 onClick={() =>
                   navigate("/disciplinas", {
-                    userData: mockedUserData,
-                    mockedInstitutionData: mockedInstitutionData,
+                    state: {
+                      userData: mockedUserData,
+                      institutionData: mockedInstitutionData,
+                    },
                   })
                 }
               >
