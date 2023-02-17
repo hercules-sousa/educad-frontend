@@ -40,10 +40,12 @@ const DisciplinasPage = () => {
         userData.userId,
         institutionData.periodId
       );
+
+      console.log(disciplinas);
     }
 
     setDisciplinas(disciplinas);
-  });
+  }, [institutionData, userData]);
 
   return (
     <>
@@ -53,175 +55,35 @@ const DisciplinasPage = () => {
         <StyledH2>Disciplinas do semestre</StyledH2>
 
         <SubjectListContainer>
-          <SubjectContainer onClick={() => navigate("/disciplina")}>
-            <SubjectImage src={ChipImage} alt="" />
+          {disciplinas?.map((disciplina: any) => {
+            return (
+              <SubjectContainer
+                key={disciplina.codigo}
+                onClick={() => navigate("/disciplina")}
+              >
+                <SubjectImage src={ChipImage} alt="" />
 
-            <SubjectInfoContainer>
-              <SubjectTitle>Gerência de Projetos</SubjectTitle>
+                <SubjectInfoContainer>
+                  <SubjectTitle>{disciplina.name}</SubjectTitle>
 
-              <SubjectInfo>Professor(a): Igor Barbosa da Costa</SubjectInfo>
+                  <SubjectInfo>
+                    Professor(a): {disciplina.teacher.fullName}
+                  </SubjectInfo>
 
-              <SubjectInfo>Código da disciplina: XXXXX</SubjectInfo>
+                  <SubjectInfo>
+                    Código da disciplina: {disciplina.codigo}
+                  </SubjectInfo>
 
-              <SubjectButtonsContainer>
-                <SemesterButton>8º Período</SemesterButton>
-                <CategoryButton>Software</CategoryButton>
-              </SubjectButtonsContainer>
-            </SubjectInfoContainer>
-          </SubjectContainer>
-
-          <SubjectContainer>
-            <SubjectImage src={ChipImage} alt="" />
-
-            <SubjectInfoContainer>
-              <SubjectTitle>Teste de Software</SubjectTitle>
-
-              <SubjectInfo>Professor(a): Mirna da Silva</SubjectInfo>
-
-              <SubjectInfo>Código da disciplina: XXXXX</SubjectInfo>
-
-              <SubjectButtonsContainer>
-                <SemesterButton>8º Período</SemesterButton>
-                <CategoryButton>Software</CategoryButton>
-              </SubjectButtonsContainer>
-            </SubjectInfoContainer>
-          </SubjectContainer>
-
-          <SubjectContainer>
-            <SubjectImage src={ChipImage} alt="" />
-
-            <SubjectInfoContainer>
-              <SubjectTitle>Análise e Técnicas de Algoritmos</SubjectTitle>
-
-              <SubjectInfo>Professor(a): Fulano de Tal</SubjectInfo>
-
-              <SubjectInfo>Código da disciplina: XXXXX</SubjectInfo>
-
-              <SubjectButtonsContainer>
-                <SemesterButton>8º Período</SemesterButton>
-                <CategoryButton>Software</CategoryButton>
-              </SubjectButtonsContainer>
-            </SubjectInfoContainer>
-          </SubjectContainer>
-
-          <SubjectContainer>
-            <SubjectImage src={ChipImage} alt="" />
-
-            <SubjectInfoContainer>
-              <SubjectTitle>Análise e Projeto de Sistemas</SubjectTitle>
-
-              <SubjectInfo>Professor(a): Fulano de Tal</SubjectInfo>
-
-              <SubjectInfo>Código da disciplina: XXXXX</SubjectInfo>
-
-              <SubjectButtonsContainer>
-                <SemesterButton>8º Período</SemesterButton>
-                <CategoryButton>Software</CategoryButton>
-              </SubjectButtonsContainer>
-            </SubjectInfoContainer>
-          </SubjectContainer>
-
-          <SubjectContainer>
-            <SubjectImage src={ChipImage} alt="" />
-
-            <SubjectInfoContainer>
-              <SubjectTitle>Inteligência Artificial</SubjectTitle>
-
-              <SubjectInfo>Professor(a): Fulano de Tal</SubjectInfo>
-
-              <SubjectInfo>Código da disciplina: XXXXX</SubjectInfo>
-
-              <SubjectButtonsContainer>
-                <SemesterButton>8º Período</SemesterButton>
-                <CategoryButton>Software</CategoryButton>
-              </SubjectButtonsContainer>
-            </SubjectInfoContainer>
-          </SubjectContainer>
-
-          <SubjectContainer>
-            <SubjectImage src={ChipImage} alt="" />
-
-            <SubjectInfoContainer>
-              <SubjectTitle>Padrões de Projetos</SubjectTitle>
-
-              <SubjectInfo>Professor(a): Fulano de Tal</SubjectInfo>
-
-              <SubjectInfo>Código da disciplina: XXXXX</SubjectInfo>
-
-              <SubjectButtonsContainer>
-                <SemesterButton>8º Período</SemesterButton>
-                <CategoryButton>Software</CategoryButton>
-              </SubjectButtonsContainer>
-            </SubjectInfoContainer>
-          </SubjectContainer>
-
-          <SubjectContainer>
-            <SubjectImage src={ChipImage} alt="" />
-
-            <SubjectInfoContainer>
-              <SubjectTitle>Redes de Computadores</SubjectTitle>
-
-              <SubjectInfo>Professor(a): Fulano de Tal</SubjectInfo>
-
-              <SubjectInfo>Código da disciplina: XXXXX</SubjectInfo>
-
-              <SubjectButtonsContainer>
-                <SemesterButton>8º Período</SemesterButton>
-                <CategoryButton>Software</CategoryButton>
-              </SubjectButtonsContainer>
-            </SubjectInfoContainer>
-          </SubjectContainer>
-
-          <SubjectContainer>
-            <SubjectImage src={ChipImage} alt="" />
-
-            <SubjectInfoContainer>
-              <SubjectTitle>Banco de Dados</SubjectTitle>
-
-              <SubjectInfo>Professor(a): Fulano de Tal</SubjectInfo>
-
-              <SubjectInfo>Código da disciplina: XXXXX</SubjectInfo>
-
-              <SubjectButtonsContainer>
-                <SemesterButton>8º Período</SemesterButton>
-                <CategoryButton>Software</CategoryButton>
-              </SubjectButtonsContainer>
-            </SubjectInfoContainer>
-          </SubjectContainer>
-
-          <SubjectContainer>
-            <SubjectImage src={ChipImage} alt="" />
-
-            <SubjectInfoContainer>
-              <SubjectTitle>Teoria da Computação</SubjectTitle>
-
-              <SubjectInfo>Professor(a): Fulano de Tal</SubjectInfo>
-
-              <SubjectInfo>Código da disciplina: XXXXX</SubjectInfo>
-
-              <SubjectButtonsContainer>
-                <SemesterButton>8º Período</SemesterButton>
-                <CategoryButton>Software</CategoryButton>
-              </SubjectButtonsContainer>
-            </SubjectInfoContainer>
-          </SubjectContainer>
-
-          <SubjectContainer>
-            <SubjectImage src={ChipImage} alt="" />
-
-            <SubjectInfoContainer>
-              <SubjectTitle>Sistemas Operacionais</SubjectTitle>
-
-              <SubjectInfo>Professor(a): Fulano de Tal</SubjectInfo>
-
-              <SubjectInfo>Código da disciplina: XXXXX</SubjectInfo>
-
-              <SubjectButtonsContainer>
-                <SemesterButton>8º Período</SemesterButton>
-                <CategoryButton>Software</CategoryButton>
-              </SubjectButtonsContainer>
-            </SubjectInfoContainer>
-          </SubjectContainer>
+                  <SubjectButtonsContainer>
+                    <SemesterButton>
+                      {disciplina.assignedPeriod}º Período
+                    </SemesterButton>
+                    <CategoryButton>{disciplina.type}</CategoryButton>
+                  </SubjectButtonsContainer>
+                </SubjectInfoContainer>
+              </SubjectContainer>
+            );
+          })}
         </SubjectListContainer>
       </SubjectPageContainer>
     </>

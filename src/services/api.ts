@@ -1,10 +1,60 @@
-import axios from 'axios'
+import axios from "axios";
 
 export const api = axios.create({
-    baseURL: 'http://localhost:8080'
-})
+  baseURL: "http://localhost:8080",
+});
 
 export const getDisciplinasByUserId = (userId: number, period: string) => {
-    // Fazer uma requisição para o backend para obter os dados
-    return null
-}
+  // Fazer uma requisição para o backend para obter os dados
+  const data = [
+    {
+      name: "Sistemas Embarcados",
+      assignedPeriod: 9,
+      courseId: 0,
+      period: period,
+      codigo: 656598,
+      teacher: {
+        cpf: "12862305460",
+        fullName: "José Guimarães Rosa",
+      },
+      type: "Hardware",
+    },
+    {
+      name: "Gerência de Software",
+      assignedPeriod: 8,
+      courseId: 0,
+      period: period,
+      codigo: 988745,
+      teacher: {
+        cpf: "12862775460",
+        fullName: "Igor Barbosa da Costa",
+      },
+      type: "Software",
+    },
+    {
+      name: "Teste de Software",
+      assignedPeriod: 10,
+      courseId: 0,
+      period: period,
+      codigo: 653221,
+      teacher: {
+        cpf: "12862305560",
+        fullName: "Pedro Pascal",
+      },
+      type: "Software",
+    },
+    {
+      name: "Cálculo",
+      assignedPeriod: 4,
+      courseId: 0,
+      period: period,
+      codigo: 656545,
+      teacher: {
+        cpf: "12862305460",
+        fullName: "José Guimarães Rosa",
+      },
+      type: "Exatas",
+    },
+  ];
+  return data;
+};
