@@ -134,6 +134,16 @@ export const StudentName = styled.p`
   font-size: 14px;
 `;
 
+export const StyledContainer = styled.div`
+  padding-right: 400px;
+  padding-left: 400px;
+`;
+
+export const StyledBreadCrumbsContainer = styled.div`
+  margin-top: 100px;
+  margin-bottom: 100px;
+`;
+
 export const StyledLink = styled(Link)`
   text-decoration: none;
   font-weight: 500;
@@ -145,14 +155,10 @@ export const StyledLink = styled(Link)`
   }
 `;
 
-export const BreadCrumbsContainer = styled.div`
-  margin: 100px;
-`;
-
 export const StyledMain = styled.main`
   background-color: gray;
   width: 100%;
-  height: 200px;
+  height: 100vh;
   display: flex;
   justify-content: center;
 `;

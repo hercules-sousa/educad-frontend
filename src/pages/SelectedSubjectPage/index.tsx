@@ -1,7 +1,8 @@
 import { useLocation } from "react-router-dom";
 import NavBar from "../../components/NavBar";
 import {
-  BreadCrumbsContainer,
+  StyledBreadCrumbsContainer,
+  StyledContainer,
   StyledDisciplinaCardSection,
   StyledLink,
   StyledMain,
@@ -49,13 +50,16 @@ const SubjectPage = () => {
   return (
     <div>
       <NavBar />
-      <BreadCrumbsContainer>
-        <BreadCrumbs data={breadCrumbsData} />
-      </BreadCrumbsContainer>
 
-      <StyledMain>
-        <StyledDisciplinaCardSection></StyledDisciplinaCardSection>
-      </StyledMain>
+      <StyledContainer>
+        <StyledBreadCrumbsContainer>
+          <BreadCrumbs data={breadCrumbsData} />
+        </StyledBreadCrumbsContainer>
+
+        <StyledMain>
+          <StyledDisciplinaCardSection></StyledDisciplinaCardSection>
+        </StyledMain>
+      </StyledContainer>
     </div>
   );
 };
