@@ -40,6 +40,22 @@ const DisciplinasPage = () => {
         userData.userId,
         institutionData.periodId
       );
+    } else {
+      disciplinas = [
+        {
+          name: "Algoritmos",
+          assignedPeriod: 1,
+          courseId: 0,
+          period: "202201",
+          codigo: 656598,
+          teacher: {
+            cpf: "12862305460",
+            fullName: "Ianna Sodré",
+            email: "ianna.sodre@ifpb.edu.br",
+          },
+          type: "Software",
+        },
+      ];
     }
 
     setDisciplinas(disciplinas);

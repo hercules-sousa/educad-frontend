@@ -1,4 +1,3 @@
-import { useLocation } from "react-router-dom";
 import NavBar from "../../components/NavBar";
 import { BreadCrumbsContainer, StyledLink } from "./styles";
 
