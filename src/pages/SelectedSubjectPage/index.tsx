@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import NavBar from "../../components/NavBar";
 import {
@@ -7,10 +8,14 @@ import {
   StyledDisciplinaCardInfo,
   StyledDisciplinaCardLinesContainer,
   StyledDisciplinaCardSection,
+  StyledRowContainer,
   StyledLink,
   StyledMain,
   StyledNavContainer,
   StyledNavItemButton,
+  StyledRowTitle,
+  StyledItemsContainer,
+  StyledItemCard,
 } from "./styles";
 
 const BreadCrumbs = ({ data }: { data: Array<Record<string, string>> }) => {
@@ -100,6 +105,8 @@ const SubjectPage = () => {
   const disciplina = location?.state.disciplinaData;
   console.log("Dados chegando da tela de disciplina", location);
 
+  const [itemsToShow, setItemsToShow] = useState<string>("materiais");
+
   return (
     <div>
       <NavBar />
@@ -125,6 +132,23 @@ const SubjectPage = () => {
             />
             <NavItemButton title="Turma" onClick={() => alert("Clicked")} />
           </StyledNavContainer>
+
+          {itemsToShow === "materiais" && (
+            <StyledRowContainer>
+              <StyledRowTitle>Materiais</StyledRowTitle>
+              <StyledItemsContainer>
+                <StyledItemCard></StyledItemCard>
+                <StyledItemCard></StyledItemCard>
+                <StyledItemCard></StyledItemCard>
+                <StyledItemCard></StyledItemCard>
+                <StyledItemCard></StyledItemCard>
+                <StyledItemCard></StyledItemCard>
+                <StyledItemCard></StyledItemCard>
+                <StyledItemCard></StyledItemCard>
+                <StyledItemCard></StyledItemCard>
+              </StyledItemsContainer>
+            </StyledRowContainer>
+          )}
         </StyledMain>
       </StyledContainer>
     </div>

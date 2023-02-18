@@ -157,10 +157,11 @@ export const StyledLink = styled(Link)`
 
 export const StyledMain = styled.main`
   width: 100%;
-  height: 100vh;
+  height: auto;
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 300px;
 `;
 
 export const StyledDisciplinaCardSection = styled.section`
@@ -218,4 +219,46 @@ export const StyledNavItemButton = styled.button`
   :focus {
     background-color: #1b1d2a;
   }
+`;
+
+export const StyledRowContainer = styled.div`
+  width: 100%;
+  height: 33%;
+`;
+
+export const StyledRowTitle = styled.h3`
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--corAzulMedio);
+  width: 880px;
+  margin-bottom: 48px;
+`;
+
+export const StyledItemsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  height: 200px;
+  width: 100%;
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  :last-child {
+    margin-left: 0;
+  }
+  background-color: gray;
+`;
+
+export const StyledItemCard = styled.div`
+  height: 100%;
+  width: 300px;
+  background-color: red;
+  margin-right: 16px;
+  border-radius: 18px;
 `;
