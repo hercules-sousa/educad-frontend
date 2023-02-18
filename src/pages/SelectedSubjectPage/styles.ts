@@ -144,3 +144,7 @@ export const StyledLink = styled(Link)`
     color: var(--corBotaoPeriodo);
   }
 `;
+
+export const BreadCrumbsContainer = styled.div`
+  margin: 100px;
+`;

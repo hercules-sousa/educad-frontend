@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import NavBar from "../../components/NavBar";
-import { StyledLink } from "./styles";
+import { BreadCrumbsContainer, StyledLink } from "./styles";
 
 const BreadCrumbs = ({ data }: { data: Array<Record<string, string>> }) => {
   return (
@@ -38,14 +38,12 @@ const SubjectPage = () => {
     },
   ];
 
-  const location = useLocation();
-
-  console.log(location);
-
   return (
     <div>
       <NavBar />
-      <BreadCrumbs data={breadCrumbsData} />
+      <BreadCrumbsContainer>
+        <BreadCrumbs data={breadCrumbsData} />
+      </BreadCrumbsContainer>
     </div>
   );
 };
