@@ -156,7 +156,6 @@ export const StyledLink = styled(Link)`
 `;
 
 export const StyledMain = styled.main`
-  background-color: gray;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -190,4 +189,29 @@ export const StyledDisciplinaCardLinesContainer = styled.span`
   margin-bottom: 12px;
   color: white;
   font-size: 18px;
+`;
+
+export const StyledNavContainer = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  margin-top: 48px;
+  margin-bottom: 48px;
+  justify-content: center;
+`;
+
+export const StyledNavItemButton = styled.button`
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 75px;
+  margin: 0 10px;
+  background-color: #949494;
+  border-radius: 20px;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: white;
 `;

@@ -9,6 +9,8 @@ import {
   StyledDisciplinaCardSection,
   StyledLink,
   StyledMain,
+  StyledNavContainer,
+  StyledNavItemButton,
 } from "./styles";
 
 const BreadCrumbs = ({ data }: { data: Array<Record<string, string>> }) => {
@@ -100,8 +102,14 @@ const SubjectPage = () => {
             disciplinaName={disciplina.name}
             teacherName={disciplina.teacher.fullName}
             teacherEmail={disciplina.teacher.email}
-            curso="Engenharia de computação"
+            curso="Engenharia de Computação"
           />
+
+          <StyledNavContainer>
+            <StyledNavItemButton>Materiais</StyledNavItemButton>
+            <StyledNavItemButton>Materiais</StyledNavItemButton>
+            <StyledNavItemButton>Materiais</StyledNavItemButton>
+          </StyledNavContainer>
         </StyledMain>
       </StyledContainer>
     </div>
