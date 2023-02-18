@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
   justify-content: center;
-`
+`;
 
 export const DataContainer = styled.div`
   display: flex;
@@ -11,12 +12,12 @@ export const DataContainer = styled.div`
   width: 880px;
   border-radius: 20px;
   height: 330px;
-`
+`;
 
 export const SubjectImage = styled.img`
   border-radius: 20px 0 0 20px;
   width: 300px;
-`
+`;
 
 export const DataDiv = styled.div`
   display: flex;
@@ -24,31 +25,31 @@ export const DataDiv = styled.div`
   align-items: center;
   justify-content: center;
   width: 550px;
-`
+`;
 
 export const StyledSpan = styled.span`
   font-weight: bold;
   color: white;
   font-size: 18px;
-`
+`;
 
 export const StyledP = styled.p`
   display: inline;
   color: white;
   font-size: 18px;
   margin-bottom: 2px;
-`
+`;
 
 export const LineDiv = styled.div`
   margin-bottom: 12px;
-`
+`;
 
 export const SubjectOptionsContainer = styled.div`
   margin-top: 60px;
   margin-bottom: 60px;
   display: flex;
   justify-content: center;
-`
+`;
 
 export const SubjectOptionButton = styled.button`
   cursor: pointer;
@@ -63,28 +64,32 @@ export const SubjectOptionButton = styled.button`
   text-transform: capitalize;
   font-weight: 500;
   color: white;
-`
+`;
 
 export const SectionTitle = styled.h2`
   text-transform: uppercase;
   font-size: 22px;
   font-weight: bold;
   text-transform: uppercase;
-  background-image: linear-gradient(to right, var(--corAzulMedio), var(--corAzulMarinho));  
+  background-image: linear-gradient(
+    to right,
+    var(--corAzulMedio),
+    var(--corAzulMarinho)
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: black;
   width: 880px;
   margin: auto;
-`
+`;
 
 export const SectionGrid = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 35px 0px 110px 0px;
-`
+`;
 
 export const Collection = styled.div`
   display: flex;
@@ -92,7 +97,7 @@ export const Collection = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 850px;
-`
+`;
 
 export const SectionBlock = styled.div`
   display: flex;
@@ -101,11 +106,11 @@ export const SectionBlock = styled.div`
   box-shadow: 0px 5px 10px #888;
   width: 210px;
   height: 180px;
-  background-color: #4C436F;
+  background-color: #4c436f;
   border-radius: 20px;
   font-weight: 500;
   color: white;
-`
+`;
 
 export const StudentBlock = styled.div`
   margin-bottom: 35px;
@@ -114,11 +119,11 @@ export const StudentBlock = styled.div`
   display: flex;
   background-color: #949494;
   flex-direction: column;
-`
+`;
 
 export const StudentImage = styled.img`
   border-radius: 20px;
-`
+`;
 
 export const StudentName = styled.p`
   padding: 12px 0px;
@@ -127,4 +132,15 @@ export const StudentName = styled.p`
   color: white;
   letter-spacing: 0.8px;
   font-size: 14px;
-`
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--corEducad);
+  font-size: 20px;
+
+  :hover {
+    color: var(--corBotaoPeriodo);
+  }
+`;
