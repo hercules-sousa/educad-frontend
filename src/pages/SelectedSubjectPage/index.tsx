@@ -4,6 +4,8 @@ import {
   StyledBreadCrumbsContainer,
   StyledContainer,
   StyledDisciplinaCardImg,
+  StyledDisciplinaCardInfo,
+  StyledDisciplinaCardLinesContainer,
   StyledDisciplinaCardSection,
   StyledLink,
   StyledMain,
@@ -22,6 +24,41 @@ const BreadCrumbs = ({ data }: { data: Array<Record<string, string>> }) => {
         );
       })}
     </div>
+  );
+};
+
+const DisciplinaCard = ({
+  disciplinaName,
+  teacherName,
+  teacherEmail,
+  curso,
+}: {
+  disciplinaName: string;
+  teacherName: string;
+  teacherEmail: string;
+  curso: string;
+}) => {
+  return (
+    <StyledDisciplinaCardSection>
+      <StyledDisciplinaCardImg src="https://source.unsplash.com/330x330/?programming-screen" />
+      <StyledDisciplinaCardInfo>
+        <StyledDisciplinaCardLinesContainer>
+          <strong>Disciplina:</strong> {disciplinaName}
+        </StyledDisciplinaCardLinesContainer>
+
+        <StyledDisciplinaCardLinesContainer>
+          <strong>Professor(a):</strong> {teacherName}
+        </StyledDisciplinaCardLinesContainer>
+
+        <StyledDisciplinaCardLinesContainer>
+          <strong>Email do professor(a):</strong> {teacherEmail}
+        </StyledDisciplinaCardLinesContainer>
+
+        <StyledDisciplinaCardLinesContainer>
+          <strong>Curso:</strong> {curso}
+        </StyledDisciplinaCardLinesContainer>
+      </StyledDisciplinaCardInfo>
+    </StyledDisciplinaCardSection>
   );
 };
 
@@ -46,6 +83,7 @@ const SubjectPage = () => {
   ];
 
   const location = useLocation();
+  const disciplina = location?.state.disciplinaData;
   console.log("Dados chegando da tela de disciplina", location);
 
   return (
@@ -58,9 +96,12 @@ const SubjectPage = () => {
         </StyledBreadCrumbsContainer>
 
         <StyledMain>
-          <StyledDisciplinaCardSection>
-            <StyledDisciplinaCardImg src="" />
-          </StyledDisciplinaCardSection>
+          <DisciplinaCard
+            disciplinaName={disciplina.name}
+            teacherName={disciplina.teacher.fullName}
+            teacherEmail={disciplina.teacher.email}
+            curso="Engenharia de computação"
+          />
         </StyledMain>
       </StyledContainer>
     </div>

@@ -160,11 +160,12 @@ export const StyledMain = styled.main`
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `;
 
 export const StyledDisciplinaCardSection = styled.section`
-  background-color: lightgray;
+  background-color: var(--corTexto);
   width: 100%;
   height: 336px;
   border-radius: 20px;
@@ -175,4 +176,18 @@ export const StyledDisciplinaCardSection = styled.section`
 export const StyledDisciplinaCardImg = styled.img`
   border-radius: 20px 0 0 20px;
   width: 330px;
+`;
+
+export const StyledDisciplinaCardInfo = styled.div`
+  width: 100%;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+export const StyledDisciplinaCardLinesContainer = styled.span`
+  margin-bottom: 12px;
+  color: white;
+  font-size: 18px;
 `;

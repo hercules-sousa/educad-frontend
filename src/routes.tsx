@@ -12,6 +12,8 @@ import {
   RequireNoAuth,
 } from "./services/auth";
 
+// Se a gente quiser criar breadCrumbs vamos precisar reorganizar as rotas para que elas tenham rotas "filhas"
+
 function Router() {
   return (
     <AuthContextProvider>
