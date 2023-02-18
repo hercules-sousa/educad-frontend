@@ -16,6 +16,7 @@ export const getDisciplinasByUserId = (userId: number, period: string) => {
       teacher: {
         cpf: "12862305460",
         fullName: "José Guimarães Rosa",
+        email: "jose.guimaraes@ifpb.edu.br",
       },
       type: "Hardware",
     },
@@ -28,6 +29,7 @@ export const getDisciplinasByUserId = (userId: number, period: string) => {
       teacher: {
         cpf: "12862775460",
         fullName: "Igor Barbosa da Costa",
+        email: "igor.costa@ifpb.edu.br",
       },
       type: "Software",
     },
@@ -40,6 +42,7 @@ export const getDisciplinasByUserId = (userId: number, period: string) => {
       teacher: {
         cpf: "12862305560",
         fullName: "Pedro Pascal",
+        email: "pedro.pascal@ifpb.edu.br",
       },
       type: "Software",
     },
@@ -52,6 +55,7 @@ export const getDisciplinasByUserId = (userId: number, period: string) => {
       teacher: {
         cpf: "12862305460",
         fullName: "José Guimarães Rosa",
+        email: "jose.guimaraes@ifpb.edu.br",
       },
       type: "Exatas",
     },

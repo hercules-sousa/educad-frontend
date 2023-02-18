@@ -50,15 +50,15 @@ const SubjectData: React.FC<SubjectDataProps> = ({ additionalStyle }) => {
           <div>
             <LineDiv>
               <StyledSpan>Disciplina: </StyledSpan>
-              <StyledP>asdf</StyledP>
+              <StyledP>{data.name}</StyledP>
             </LineDiv>
             <LineDiv>
               <StyledSpan>Professor(a): </StyledSpan>
-              <StyledP>asdf</StyledP>
+              <StyledP>{data.teacher.fullName}</StyledP>
             </LineDiv>
             <LineDiv>
               <StyledSpan>Contato: </StyledSpan>
-              <StyledP>mirna.silva@ifpb.edu.br</StyledP>
+              <StyledP>{data.teacher.email}</StyledP>
             </LineDiv>
             <LineDiv>
               <StyledSpan>Curso: </StyledSpan>
