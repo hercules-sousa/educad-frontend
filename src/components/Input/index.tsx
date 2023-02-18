@@ -50,7 +50,6 @@ const Input: React.FC<InputProps> = ({
       {rightIcon && (
         <EyeButton
           onClick={(e: SyntheticEvent) => {
-            e.preventDefault();
             setShowPassword(!showPassword);
           }}
         />

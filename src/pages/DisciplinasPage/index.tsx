@@ -40,8 +40,6 @@ const DisciplinasPage = () => {
         userData.userId,
         institutionData.periodId
       );
-
-      console.log(disciplinas);
     }
 
     setDisciplinas(disciplinas);
@@ -59,7 +57,13 @@ const DisciplinasPage = () => {
             return (
               <SubjectContainer
                 key={disciplina.codigo}
-                onClick={() => navigate("/disciplina")}
+                onClick={() =>
+                  navigate("/disciplina", {
+                    state: {
+                      disciplinaData: disciplina,
+                    },
+                  })
+                }
               >
                 <SubjectImage src={ChipImage} alt="" />
 

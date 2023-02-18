@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 import {
   Collection,
@@ -21,10 +22,22 @@ import {
 
 import NavBar from "../../components/NavBar";
 import HistoryBar from "../../components/HistoryBar";
-
 import SubjectDataProps from "./types";
 
 const SubjectData: React.FC<SubjectDataProps> = ({ additionalStyle }) => {
+  const [data, setData] = useState<any>(null);
+
+  const location = useLocation();
+
+  const disciplinaData = location.state?.disciplinaData;
+
+  useEffect(() => {
+    if (disciplinaData) {
+      setData(disciplinaData);
+      console.log("Dados que chegaram", data);
+    }
+  }, [data, disciplinaData]);
+
   return (
     <Container>
       <DataContainer>
@@ -37,11 +50,11 @@ const SubjectData: React.FC<SubjectDataProps> = ({ additionalStyle }) => {
           <div>
             <LineDiv>
               <StyledSpan>Disciplina: </StyledSpan>
-              <StyledP>Teste de Software</StyledP>
+              <StyledP>asdf</StyledP>
             </LineDiv>
             <LineDiv>
               <StyledSpan>Professor(a): </StyledSpan>
-              <StyledP>Mirna da Silva</StyledP>
+              <StyledP>asdf</StyledP>
             </LineDiv>
             <LineDiv>
               <StyledSpan>Contato: </StyledSpan>
