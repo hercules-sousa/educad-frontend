@@ -165,6 +165,14 @@ export const StyledMain = styled.main`
 
 export const StyledDisciplinaCardSection = styled.section`
   background-color: lightgray;
-  width: 60%;
+  width: 100%;
   height: 336px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+`;
+
+export const StyledDisciplinaCardImg = styled.img`
+  border-radius: 20px 0 0 20px;
+  width: 330px;
 `;

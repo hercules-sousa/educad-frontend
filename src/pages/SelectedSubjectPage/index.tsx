@@ -3,6 +3,7 @@ import NavBar from "../../components/NavBar";
 import {
   StyledBreadCrumbsContainer,
   StyledContainer,
+  StyledDisciplinaCardImg,
   StyledDisciplinaCardSection,
   StyledLink,
   StyledMain,
@@ -57,7 +58,9 @@ const SubjectPage = () => {
         </StyledBreadCrumbsContainer>
 
         <StyledMain>
-          <StyledDisciplinaCardSection></StyledDisciplinaCardSection>
+          <StyledDisciplinaCardSection>
+            <StyledDisciplinaCardImg src="" />
+          </StyledDisciplinaCardSection>
         </StyledMain>
       </StyledContainer>
     </div>
