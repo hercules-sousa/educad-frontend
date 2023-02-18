@@ -214,4 +214,8 @@ export const StyledNavItemButton = styled.button`
   text-transform: capitalize;
   font-weight: 500;
   color: white;
+
+  :focus {
+    background-color: #1b1d2a;
+  }
 `;

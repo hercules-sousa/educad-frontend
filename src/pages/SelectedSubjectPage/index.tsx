@@ -64,6 +64,18 @@ const DisciplinaCard = ({
   );
 };
 
+const NavItemButton = ({
+  title,
+  onClick,
+}: {
+  title: string;
+  onClick: () => void;
+}) => {
+  return (
+    <StyledNavItemButton onClick={() => onClick()}>{title}</StyledNavItemButton>
+  );
+};
+
 const SubjectPage = () => {
   const breadCrumbsData = [
     {
@@ -106,9 +118,12 @@ const SubjectPage = () => {
           />
 
           <StyledNavContainer>
-            <StyledNavItemButton>Materiais</StyledNavItemButton>
-            <StyledNavItemButton>Materiais</StyledNavItemButton>
-            <StyledNavItemButton>Materiais</StyledNavItemButton>
+            <NavItemButton title="Materiais" onClick={() => alert("Clicked")} />
+            <NavItemButton
+              title="Atividades"
+              onClick={() => alert("Clicked")}
+            />
+            <NavItemButton title="Turma" onClick={() => alert("Clicked")} />
           </StyledNavContainer>
         </StyledMain>
       </StyledContainer>
