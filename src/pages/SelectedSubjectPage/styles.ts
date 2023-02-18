@@ -148,3 +148,17 @@ export const StyledLink = styled(Link)`
 export const BreadCrumbsContainer = styled.div`
   margin: 100px;
 `;
+
+export const StyledMain = styled.main`
+  background-color: gray;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+`;
+
+export const StyledDisciplinaCardSection = styled.section`
+  background-color: lightgray;
+  width: 60%;
+  height: 336px;
+`;
