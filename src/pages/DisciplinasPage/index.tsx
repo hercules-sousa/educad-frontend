@@ -17,18 +17,17 @@ import {
   SubjectPageContainer,
   SubjectTitle,
 } from "./styles";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getDisciplinasByUserId } from "../../services/api";
+
+
+import { institutionData, userData } from "../../services/mockData";
 
 const DisciplinasPage = () => {
   const [disciplinas, setDisciplinas] = useState<any>();
 
   const navigate = useNavigate();
-  const location = useLocation();
-
-  const userData = location.state?.userData;
-  const institutionData = location.state?.institutionData;
 
   console.log("Dados que estão chegando", userData, institutionData);
 
@@ -59,7 +58,7 @@ const DisciplinasPage = () => {
     }
 
     setDisciplinas(disciplinas);
-  }, [institutionData, userData]);
+  }, []);
 
   return (
     <>
@@ -74,11 +73,7 @@ const DisciplinasPage = () => {
               <SubjectContainer
                 key={disciplina.codigo}
                 onClick={() =>
-                  navigate("/disciplina", {
-                    state: {
-                      disciplinaData: disciplina,
-                    },
-                  })
+                  navigate(`/disciplina/${disciplina.codigo}`)
                 }
               >
                 <SubjectImage src={ChipImage} alt="" />

@@ -43,7 +43,7 @@ function Router() {
           }
         />
         <Route
-          path="/disciplina"
+          path="/disciplina/:id"
           element={
             <RequireAuth>
               <SelectedSubjectPage />

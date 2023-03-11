@@ -19,14 +19,6 @@ import {
   StyledWelcomeText,
 } from "./styles";
 
-const mockedUserData = {
-  userId: 0,
-};
-
-const mockedInstitutionData = {
-  periodId: "202301",
-};
-
 const Home = () => {
   const navigate = useNavigate();
 
@@ -51,12 +43,7 @@ const Home = () => {
                 type="button"
                 className="turmas-virtuais"
                 onClick={() =>
-                  navigate("/disciplinas", {
-                    state: {
-                      userData: mockedUserData,
-                      institutionData: mockedInstitutionData,
-                    },
-                  })
+                  navigate("/disciplinas")
                 }
               >
                 Minhas turmas virtuais

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import NavBar from "../../components/NavBar";
 import {
   StyledBreadCrumbsContainer,
@@ -17,6 +17,8 @@ import {
   StyledItemsContainer,
   StyledItemCard,
 } from "./styles";
+
+import { getSubjectById } from "../../services/api";
 
 const BreadCrumbs = ({ data }: { data: Array<Record<string, string>> }) => {
   return (
@@ -101,9 +103,11 @@ const SubjectPage = () => {
     },
   ];
 
-  const location = useLocation();
-  const disciplina = location?.state.disciplinaData;
-  console.log("Dados chegando da tela de disciplina", location);
+  const { id } = useParams();
+  
+  const disciplina = getSubjectById(id!)!;
+
+  console.log("Dados chegando da tela de disciplina", disciplina);
 
   const [itemsToShow, setItemsToShow] = useState<string>("materiais");
 
