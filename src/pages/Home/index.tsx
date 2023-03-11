@@ -11,12 +11,30 @@ import HardwareImage from "../../assets/Rectangle-41.png";
 import ExatasImage from "../../assets/Rectangle-42.png";
 import HumanasImage from "../../assets/Rectangle-50.png";
 import {
+  EditalContainer,
+  EditalImageContainer,
+  EditalImg,
+  EditalText,
+  GradientText,
+  MyStudiesButton,
+  NewsLink,
+  NewsText,
+  NewsTitle,
+  SecondContainer,
   StyledButtonContainer,
   StyledContainer,
   StyledWelcome,
   StyledWelcomeContainer,
   StyledWelcomeSubtext,
   StyledWelcomeText,
+  SubjectCategoriesList,
+  SubjectCategoryA,
+  SubjectCategoryContainer,
+  SubjectCategoryImage,
+  SubjectsContainer,
+  ThirdContainer,
+  VirtualClassesButton,
+  WelcomeImage,
 } from "./styles";
 
 const Home = () => {
@@ -29,7 +47,7 @@ const Home = () => {
 
         <StyledWelcomeContainer>
           <StyledWelcome>
-            <StyledWelcomeText className="texto-gradiente-titulo texto-boasvindas">
+            <StyledWelcomeText>
               Olá, José! Acesse suas turmas e organize seus estudos de forma
               eficiente
             </StyledWelcomeText>
@@ -39,101 +57,114 @@ const Home = () => {
               engagement and monetization with better mobile campaigns
             </StyledWelcomeSubtext>
             <StyledButtonContainer>
-              <button
+              <VirtualClassesButton
                 type="button"
-                className="turmas-virtuais"
                 onClick={() =>
                   navigate("/disciplinas")
                 }
               >
                 Minhas turmas virtuais
-              </button>
-              <button type="button" className="meus-estudos">
+              </VirtualClassesButton>
+
+              <MyStudiesButton
+                type="button"
+              >
                 Meus estudos
-              </button>
+              </MyStudiesButton>
             </StyledButtonContainer>
           </StyledWelcome>
 
-          <img className="imagem-boas-vindas" src={GroupImage} alt="" />
+          <WelcomeImage src={GroupImage} alt="" />
         </StyledWelcomeContainer>
       </StyledContainer>
 
-      <div className="container2">
-        <div className="disciplinas">
-          <h2 className="texto-gradiente texto-disciplinas">
+      <SecondContainer>
+        <SubjectsContainer>
+          <GradientText>
             Disciplinas por área
-          </h2>
-          <div className="lista-areas">
-            <div>
-              <a className="materia-software" href="disciplinas-software.html">
-                <img src={SoftwareImage} alt="" />
-                software
-              </a>
-            </div>
-            <div>
-              <a className="materia-hardware" href="#">
-                <img src={HardwareImage} alt="" />
-                hardware
-              </a>
-            </div>
-            <div>
-              <a className="materia-exatas" href="disciplinas-exatas.html ">
-                <img src={ExatasImage} alt="" />
-                exatas
-              </a>
-            </div>
-            <div>
-              <a className="materia-humanas" href="disciplinas-humanas.html">
-                <img src={HumanasImage} alt="" />
-                humanas
-              </a>
-            </div>
-          </div>
-        </div>
+          </GradientText>
 
-        <div className="edital">
-          <div className="texto-edital">
-            <h2 className="texto-gradiente">Editais abertos</h2>
-            <p className="titulo-noticia">
+          <SubjectCategoriesList>
+            <SubjectCategoryContainer>
+              <SubjectCategoryA>
+                <SubjectCategoryImage src={SoftwareImage} alt="" />
+                software
+              </SubjectCategoryA>
+            </SubjectCategoryContainer>
+
+            <SubjectCategoryContainer>
+              <SubjectCategoryA>
+                <SubjectCategoryImage src={HardwareImage} alt="" />
+                hardware
+              </SubjectCategoryA>
+            </SubjectCategoryContainer>
+
+            <SubjectCategoryContainer>
+              <SubjectCategoryA>
+                <SubjectCategoryImage src={ExatasImage} alt="" />
+                exatas
+              </SubjectCategoryA>
+            </SubjectCategoryContainer>
+
+            <SubjectCategoryContainer>
+              <SubjectCategoryA>
+                <SubjectCategoryImage src={HumanasImage} alt="" />
+                humanas
+              </SubjectCategoryA>
+            </SubjectCategoryContainer>
+          </SubjectCategoriesList>
+        </SubjectsContainer>
+
+        <EditalContainer>
+          <EditalText>
+            <GradientText>Editais abertos</GradientText>
+            <NewsTitle>
               Confira os editais abertos para alunos do curso de Engenharia de
               Computação
-            </p>
-            <p className="texto-noticia">
+            </NewsTitle>
+
+            <NewsText>
               With Rover, you can easily launch new, multi-screen, native mobile
               experiences. Design engaging content in the browser, and deploy
               instantly through your app at the right time and place.
-            </p>
-            <a className="link" href="#">
-              Ver todos os editais -{">"}
-            </a>
-          </div>
-          <div className="imagem-edital">
-            <img src={EditalImage} alt="" />
-          </div>
-        </div>
+            </NewsText>
 
-        <div className="edital">
-          <div className="texto-edital">
-            <h2 className="texto-gradiente">Oportunidades de estágios</h2>
-            <p className="titulo-noticia">
+            <NewsLink>
+              Ver todos os editais -{">"}
+            </NewsLink>
+          </EditalText>
+          
+          <EditalImageContainer>
+            <EditalImg src={EditalImage} alt="" />
+          </EditalImageContainer>
+        </EditalContainer>
+
+        <EditalContainer>
+          <EditalText>
+            <GradientText>Oportunidades de estágios</GradientText>
+
+            <NewsTitle>
               Veja os estágios disponíveis na área de Computação
-            </p>
-            <p className="texto-noticia">
+            </NewsTitle>
+
+            <NewsText>
               With Rover, you can easily launch new, multi-screen, native mobile
               experiences. Design engaging content in the browser, and deploy
               instantly through your app at the right time and place.
-            </p>
-            <a className="link" href="#">
+            </NewsText>
+            
+            <NewsLink>
               Ver todos os editais -{">"}
-            </a>
-          </div>
-          <div className="imagem-edital">
-            <img src={InternshipImage} alt="" />
-          </div>
-        </div>
-      </div>
+            </NewsLink>
+          </EditalText>
 
-      <div className="container3"></div>
+          <EditalImageContainer>
+            <EditalImg src={InternshipImage} alt="" />
+          </EditalImageContainer>
+        </EditalContainer>
+      </SecondContainer>
+
+      <ThirdContainer />
     </>
   );
 };

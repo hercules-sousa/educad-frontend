@@ -1,5 +1,22 @@
 import styled from "styled-components"
 
+export const Grid = styled.div`
+  display: grid;
+  justify-content: center; /*Centraliza horizontalmente*/
+  grid-template-columns: repeat(2, 1fr);
+  align-content: center; /*Centraliza verticalmente*/
+  height: 100vh;
+`;
+
+export const LoginForm = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  margin: auto;
+`;
+
 export const StyledForm = styled.form`
   display: flex;
   align-items: center;

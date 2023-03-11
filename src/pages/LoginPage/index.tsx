@@ -6,6 +6,8 @@ import { useAuth } from "../../services/auth";
 import "./styles.css";
 
 import {
+  Grid,
+  LoginForm,
   StyledForm,
   StyledInputContainer,
   StyledLogoContainer,
@@ -40,8 +42,8 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="grid">
-      <div className="login-form">
+    <Grid>
+      <LoginForm>
         <StyledForm>
           <StyledWelcome>Bem-vindo(a) de volta!</StyledWelcome>
 
@@ -72,7 +74,7 @@ const LoginPage = () => {
             />
           </StyledInputContainer>
         </StyledForm>
-      </div>
+      </LoginForm>
 
       <StyledLogoContainer>
         <StyledTitle>Educad</StyledTitle>
@@ -80,7 +82,7 @@ const LoginPage = () => {
           acesse suas atividades, se organize e se torne um aluno melhor
         </StyledSlogan>
       </StyledLogoContainer>
-    </div>
+    </Grid>
   );
 };
 
