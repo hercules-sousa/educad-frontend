@@ -1,19 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap");
 
-:root {
-  --corBranco: #fff;
-  --corAzulEscuro: #1b1d2a;
-  --corVioletaClaro: #221a31;
-  --corAzulClaro: #99a0de;
-  --corTurmasVirtuais: #8457d6;
-  --corMeusEstudos: #201b2f;
-  --corAzulMedio: #3861ca;
-  --corAzulMarinho: #36407c;
-  --corTituloNoticia: #323a56;
-  --corTextoNoticia: #a5a1a1;
-  --corLink: #1fb0c1;
-}
-
 .container {
   background: linear-gradient(var(--corAzulEscuro), var(--corVioletaClaro));
   height: 777px;

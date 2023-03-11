@@ -6,6 +6,27 @@
   padding: 0;
 }
 
+:root {
+  --corEducad: #211A30;
+  --corAzulMedio: #3861CA;
+  --corAzulMarinho: #36407C;
+  --corTexto: #1B1D2A;
+  --corBotaoSoftware: #273D4E;
+  --corBotaoPeriodo: #8457D6;
+  --corBotaoPago: #2FB02C;
+  --corBotaoDepente: #D73737;
+  --corBotaoCursando: #D3D737;
+  --corBranco: #fff;
+  --corAzulEscuro: #1b1d2a;
+  --corVioletaClaro: #221a31;
+  --corAzulClaro: #99a0de;
+  --corTurmasVirtuais: #8457d6;
+  --corMeusEstudos: #201b2f;
+  --corTituloNoticia: #323a56;
+  --corTextoNoticia: #a5a1a1;
+  --corLink: #1fb0c1;
+}
+
 button {
   border: none;
 }

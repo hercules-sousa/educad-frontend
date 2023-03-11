@@ -1,19 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
 
-:root {
-    --corEducad: #211A30;
-    --corAzulMedio: #3861CA;
-    --corAzulMarinho: #36407C;
-    --corTexto: #1B1D2A;
-    --corBotaoSoftware: #273D4E;
-    --corBotaoPeriodo: #8457D6;
-    --corBotaoPago: #2FB02C;
-    --corBotaoDepente: #D73737;
-    --corBotaoCursando: #D3D737;
-    --corAzulMedio: #3861CA;
-    --corAzulMarinho: #36407C;
-}
-
 /*BLOCO IMAGEM*/
 .dados-basicos {
     display: flex;
