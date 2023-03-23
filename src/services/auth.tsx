@@ -1,7 +1,7 @@
 import { createContext, useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 
-import { api } from "./api";
+import { logIn } from "./api";
 
 interface AuthContextProps {
   signIn: (
@@ -21,10 +21,12 @@ const AuthContextProvider = ({ children }: { children: React.ReactNode }) => {
     password: string,
     callback?: VoidFunction
   ) => {
-    const response = await api.post("/api/v1/auth", {
-      login: username,
-      password: password,
-    });
+    // const response = await api.post("/api/v1/auth", {
+    //   login: username,
+    //   password: password,
+    // });
+
+    const response = logIn(username, password); // Trocar por chamada à API
 
     localStorage.setItem("token", response.data.token);
     localStorage.setItem("user", JSON.stringify(response.data.user));
