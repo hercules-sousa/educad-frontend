@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./styles.css";
@@ -40,6 +41,17 @@ import {
 const Home = () => {
   const navigate = useNavigate();
 
+  const [user, setUser] = useState({
+    "name": ""
+  });
+
+  useEffect(() => {
+    const userData = localStorage.getItem("user");
+
+    if (userData)
+      setUser(JSON.parse(userData));
+  }, []);
+
   return (
     <>
       <StyledContainer>
@@ -48,7 +60,7 @@ const Home = () => {
         <StyledWelcomeContainer>
           <StyledWelcome>
             <StyledWelcomeText>
-              Olá, José! Acesse suas turmas e organize seus estudos de forma
+              Olá, {user.name}! Acesse suas turmas e organize seus estudos de forma
               eficiente
             </StyledWelcomeText>
             <StyledWelcomeSubtext>
@@ -133,7 +145,7 @@ const Home = () => {
               Ver todos os editais -{">"}
             </NewsLink>
           </EditalText>
-          
+
           <EditalImageContainer>
             <EditalImg src={EditalImage} alt="" />
           </EditalImageContainer>
@@ -152,7 +164,7 @@ const Home = () => {
               experiences. Design engaging content in the browser, and deploy
               instantly through your app at the right time and place.
             </NewsText>
-            
+
             <NewsLink>
               Ver todos os editais -{">"}
             </NewsLink>
