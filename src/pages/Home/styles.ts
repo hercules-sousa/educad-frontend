@@ -85,16 +85,20 @@ export const StyledButtonContainer = styled.div`
 `
 
 export const SecondContainer = styled.div`
-  height: 150vh;
+  padding-bottom: 70px;
 `
 
 export const SubjectsContainer = styled.div`
-  margin-top: 68px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 192px;
 `
 
 export const GradientText = styled.h2`
+  margin-top: 70px;
   font-size: 32px;
   font-weight: bold;
+  padding-left: 192px;
   text-transform: uppercase;
   background-image: linear-gradient(
     to right,
@@ -109,11 +113,9 @@ export const GradientText = styled.h2`
 
 export const SubjectCategoriesList = styled.div`
   display: flex;
-  margin-left: 222px;
-  margin-right: 192px;
   margin-top: 50px;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
 `
 
 export const SubjectCategoryContainer = styled.div`
@@ -126,6 +128,7 @@ export const SubjectCategoryContainer = styled.div`
 
   &&:hover {
     background-color: var(--corTurmasVirtuais);
+    cursor: pointer;
   }
 `
 
@@ -155,7 +158,7 @@ export const SubjectCategoryImage = styled.img`
 
 export const EditalContainer = styled.div`
   display: flex;
-  margin-top: 100px;
+  margin-top: 40px;
   justify-content: space-evenly;
 `
 
@@ -163,11 +166,9 @@ export const EditalText = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 192px;
 `
 
 export const EditalImageContainer = styled.div`
-  margin-right: 121px;
 `
 
 export const EditalImg = styled.img`

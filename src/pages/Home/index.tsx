@@ -91,45 +91,46 @@ const Home = () => {
       </StyledContainer>
 
       <SecondContainer>
-        <SubjectsContainer>
-          <GradientText>
-            Disciplinas por área
-          </GradientText>
+        <GradientText>
+          Disciplinas por área
+        </GradientText>
 
+        <SubjectsContainer>
           <SubjectCategoriesList>
             <SubjectCategoryContainer>
               <SubjectCategoryA>
                 <SubjectCategoryImage src={SoftwareImage} alt="" />
-                software
+                Software
               </SubjectCategoryA>
             </SubjectCategoryContainer>
 
             <SubjectCategoryContainer>
               <SubjectCategoryA>
                 <SubjectCategoryImage src={HardwareImage} alt="" />
-                hardware
+                Hardware
               </SubjectCategoryA>
             </SubjectCategoryContainer>
 
             <SubjectCategoryContainer>
               <SubjectCategoryA>
                 <SubjectCategoryImage src={ExatasImage} alt="" />
-                exatas
+                Exatas
               </SubjectCategoryA>
             </SubjectCategoryContainer>
 
             <SubjectCategoryContainer>
               <SubjectCategoryA>
                 <SubjectCategoryImage src={HumanasImage} alt="" />
-                humanas
+                Humanas
               </SubjectCategoryA>
             </SubjectCategoryContainer>
           </SubjectCategoriesList>
         </SubjectsContainer>
 
+        <GradientText>Editais abertos</GradientText>
+
         <EditalContainer>
           <EditalText>
-            <GradientText>Editais abertos</GradientText>
             <NewsTitle>
               Confira os editais abertos para alunos do curso de Engenharia de
               Computação
@@ -151,10 +152,10 @@ const Home = () => {
           </EditalImageContainer>
         </EditalContainer>
 
+        <GradientText>Oportunidades de estágios</GradientText>
+
         <EditalContainer>
           <EditalText>
-            <GradientText>Oportunidades de estágios</GradientText>
-
             <NewsTitle>
               Veja os estágios disponíveis na área de Computação
             </NewsTitle>
