@@ -71,19 +71,11 @@ const DisciplinaCard = ({
   );
 };
 
-const NavItemButton = ({
-  title,
-  onClick,
-}: {
-  title: string;
-  onClick: () => void;
-}) => {
-  return (
-    <StyledNavItemButton onClick={() => onClick()}>{title}</StyledNavItemButton>
-  );
-};
-
 const SubjectPage = () => {
+  const { id } = useParams();
+
+  const disciplina = getSubjectById(id!)!;
+
   const breadCrumbsData = [
     {
       pageName: "Home",
@@ -94,18 +86,10 @@ const SubjectPage = () => {
       path: "/disciplinas",
     },
     {
-      pageName: "Software",
-      path: "/home",
-    },
-    {
-      pageName: "Teste de Software",
-      path: "/home",
+      pageName: disciplina.name,
+      path: `/disciplina/${disciplina.codigo}`,
     },
   ];
-
-  const { id } = useParams();
-  
-  const disciplina = getSubjectById(id!)!;
 
   console.log("Dados chegando da tela de disciplina", disciplina);
 
@@ -129,17 +113,63 @@ const SubjectPage = () => {
           />
 
           <StyledNavContainer>
-            <NavItemButton title="Materiais" onClick={() => alert("Clicked")} />
-            <NavItemButton
-              title="Atividades"
-              onClick={() => alert("Clicked")}
-            />
-            <NavItemButton title="Turma" onClick={() => alert("Clicked")} />
+            <StyledNavItemButton
+              onClick={() => setItemsToShow('materiais')}
+              style={itemsToShow === 'materiais' ? { backgroundColor: "#1B1D2A" } : {}}
+            >
+              Materiais
+            </StyledNavItemButton>
+            <StyledNavItemButton
+              onClick={() => setItemsToShow('atividades')}
+              style={itemsToShow === 'atividades' ? { backgroundColor: "#1B1D2A" } : {}}
+            >
+              Atividades
+            </StyledNavItemButton>
+            <StyledNavItemButton
+              onClick={() => setItemsToShow('turma')}
+              style={itemsToShow === 'turma' ? { backgroundColor: "#1B1D2A" } : {}}
+            >
+              Turmas
+            </StyledNavItemButton>
           </StyledNavContainer>
 
           {itemsToShow === "materiais" && (
             <StyledRowContainer>
-              <StyledRowTitle>Materiais</StyledRowTitle>
+              <StyledRowTitle>MATERIAIS</StyledRowTitle>
+              <StyledItemsContainer>
+                <StyledItemCard></StyledItemCard>
+                <StyledItemCard></StyledItemCard>
+                <StyledItemCard></StyledItemCard>
+                <StyledItemCard></StyledItemCard>
+                <StyledItemCard></StyledItemCard>
+                <StyledItemCard></StyledItemCard>
+                <StyledItemCard></StyledItemCard>
+                <StyledItemCard></StyledItemCard>
+                <StyledItemCard></StyledItemCard>
+              </StyledItemsContainer>
+            </StyledRowContainer>
+          )}
+
+          {itemsToShow === "atividades" && (
+            <StyledRowContainer>
+              <StyledRowTitle>ATIVIDADES</StyledRowTitle>
+              <StyledItemsContainer>
+                <StyledItemCard></StyledItemCard>
+                <StyledItemCard></StyledItemCard>
+                <StyledItemCard></StyledItemCard>
+                <StyledItemCard></StyledItemCard>
+                <StyledItemCard></StyledItemCard>
+                <StyledItemCard></StyledItemCard>
+                <StyledItemCard></StyledItemCard>
+                <StyledItemCard></StyledItemCard>
+                <StyledItemCard></StyledItemCard>
+              </StyledItemsContainer>
+            </StyledRowContainer>
+          )}
+
+          {itemsToShow === "turma" && (
+            <StyledRowContainer>
+              <StyledRowTitle>TURMA</StyledRowTitle>
               <StyledItemsContainer>
                 <StyledItemCard></StyledItemCard>
                 <StyledItemCard></StyledItemCard>

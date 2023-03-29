@@ -215,10 +215,6 @@ export const StyledNavItemButton = styled.button`
   text-transform: capitalize;
   font-weight: 500;
   color: white;
-
-  :focus {
-    background-color: #1b1d2a;
-  }
 `;
 
 export const StyledRowContainer = styled.div`
@@ -252,13 +248,12 @@ export const StyledItemsContainer = styled.div`
   :last-child {
     margin-left: 0;
   }
-  background-color: gray;
 `;
 
 export const StyledItemCard = styled.div`
   height: 100%;
   width: 300px;
-  background-color: red;
+  background-color: #4C436F;
   margin-right: 16px;
   border-radius: 18px;
 `;
