@@ -54,12 +54,12 @@ export const StyledLogoContainer = styled.div`
 `
 
 export const StyledTitle = styled.h1`
-  font-size: 128px;
+  font-size: 7vw;
 `
 
 export const StyledSlogan = styled.p`
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  margin-top: 1px;
+  margin: 1px 32px 0 32px;
 `
