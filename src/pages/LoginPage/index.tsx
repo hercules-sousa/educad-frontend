@@ -70,7 +70,7 @@ const LoginPage = () => {
             <Button
               onClick={() => handleLoginSubmit()}
               text="Entrar"
-              marginTop={20}
+              marginTop={30}
             />
           </StyledInputContainer>
         </StyledForm>

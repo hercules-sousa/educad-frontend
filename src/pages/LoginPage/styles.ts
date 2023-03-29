@@ -15,6 +15,7 @@ export const LoginForm = styled.div`
   height: 100vh;
   flex-direction: column;
   margin: auto;
+  width: 100%;
 `;
 
 export const StyledForm = styled.form`
@@ -31,6 +32,7 @@ export const StyledInputContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 55%;
 `
 
 export const StyledWelcome = styled.h2`

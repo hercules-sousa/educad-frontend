@@ -9,6 +9,7 @@ interface StyledButtonProps {
 export const StyledButton = styled.button<StyledButtonProps>`
   align-items: center;
   background-color: ${props => props.backgroundColor || "#1b1d2a"};
+  border-radius: 8px;
   cursor: pointer;
   display: flex;
   justify-content: center;

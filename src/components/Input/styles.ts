@@ -35,7 +35,7 @@ export const StyledDiv = styled.div<StyledDivProps>`
   display: flex;
   position: relative;
   align-items: center;
-  width: 495px;
+  width: 100%;
   height: 54px;
   margin-top: ${props => `${props.marginTop}px` || 0};
 `
