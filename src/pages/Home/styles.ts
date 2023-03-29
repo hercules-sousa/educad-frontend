@@ -5,26 +5,25 @@ export const StyledContainer = styled.div`
   height: 777px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 `
 
 export const StyledWelcomeContainer = styled.div`
   display: flex;
+  align-items: end;
+  justify-content: space-around;
 `
 
 export const WelcomeImage = styled.img`
   height: 450px;
   width: 300px;
-  margin-top: 188px;
-  margin-left: 150px;
+  margin-bottom: -1px;
 `
 
 export const StyledWelcome = styled.div`
   display: flex;
   flex-direction: column;
-  width: 701px;
-  margin-left: 150px;
-  margin-top: 112px;
-  height: 370px;
+  margin-bottom: 120px;
 `
 
 export const StyledWelcomeText = styled.h1`
